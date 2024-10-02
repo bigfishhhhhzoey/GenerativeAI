@@ -50,18 +50,25 @@ def prepare_data():
     return df
 
 def answer_question(df, question, model="gpt-4o-mini", max_len=1800, max_tokens=150):
+    # Create the context from the dataframe
     context = create_context(question, df, max_len)
+    
     try:
-        response = client.completions.create(
+        # Create the chat completion request
+        response = client.chat.completions.create(
             model=model,
-            prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say 'I don't know'.\n\nContext: {context}\n\nQuestion: {question}\nAnswer:",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": f"Answer the question based on the context below, and if the question can't be answered based on the context, say 'I don't know'.\n\nContext: {context}\n\nQuestion: {question}\nAnswer:"}
+            ],
             temperature=0,
             max_tokens=max_tokens
         )
 
-        answer = response.choices[0].text.strip()
+        # Extract the answer from the response
+        answer = response.choices[0].message.content.strip()
 
-        # If the answer is blank or doesn't contain useful information, return "I don't know"
+        # If the answer is blank or non-informative, return "I don't know"
         if not answer or answer.lower() in ["", "i don't know", "i don’t know"]:
             return "I don't know"
         
