@@ -23,7 +23,12 @@ class HyperlinkParser(HTMLParser):
 
 # Function to get the hyperlinks from a URL
 def get_hyperlinks(url):
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+        'Referer': 'https://www.google.com',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8'
+    }
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req) as response:
@@ -31,12 +36,13 @@ def get_hyperlinks(url):
                 return []
             html = response.read().decode('utf-8')
     except Exception as e:
-        print(e)
+        print(f"Error fetching {url}: {e}")
         return []
-    
+
     parser = HyperlinkParser()
     parser.feed(html)
     return parser.hyperlinks
+
 
 # Function to get the hyperlinks from a URL that are within the same domain
 def get_domain_hyperlinks(local_domain, url):
