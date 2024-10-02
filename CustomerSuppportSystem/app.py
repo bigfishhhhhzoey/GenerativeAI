@@ -29,7 +29,7 @@ def distances_from_embeddings(query_embedding: List[float], embeddings: List[Lis
     }
     return [distance_metrics[distance_metric](query_embedding, embedding) for embedding in embeddings]
 
-def create_context(question: str, df: pd.DataFrame, max_len: int = 1800, model: str = "text-embedding-ada-002", distance_metric: str = "cosine"):
+def create_context(question: str, df: pd.DataFrame, max_len: int = 1800, model: str = "text-embedding-3-small", distance_metric: str = "cosine"):
     q_embeddings = client.embeddings.create(input=question, model=model).data[0].embedding
     df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].tolist(), distance_metric)
 
@@ -49,7 +49,7 @@ def prepare_data():
     df['embeddings'] = df['embeddings'].apply(literal_eval).apply(np.array)
     return df
 
-def answer_question(df, question, model="gpt-3.5-turbo-instruct", max_len=1800, max_tokens=150):
+def answer_question(df, question, model="gpt-4o-mini", max_len=1800, max_tokens=150):
     context = create_context(question, df, max_len)
     try:
         response = client.completions.create(
