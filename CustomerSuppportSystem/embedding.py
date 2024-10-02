@@ -59,7 +59,7 @@ def generate_embeddings():
     df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
 
     # Apply embedding
-    df['embeddings'] = df.text.apply(lambda x: client.embeddings.create(input=x, model="text-embedding-ada-002").data[0].embedding)
+    df['embeddings'] = df.text.apply(lambda x: client.embeddings.create(input=x, model="text-embedding-3-small").data[0].embedding)
     
     df.to_csv('processed/embeddings.csv')
     print("Embeddings generated and saved.")
