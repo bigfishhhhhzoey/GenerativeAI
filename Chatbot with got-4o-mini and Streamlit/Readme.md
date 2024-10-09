@@ -58,4 +58,4 @@ The chatbot runs on a Streamlit-based web interface, providing an intuitive UI t
 You can access the full codebase on GitHub: [GenerativeAI - Chatbot with GPT-4o Mini and Streamlit](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Chatbot%20with%20got-4o-mini%20and%20Streamlit).
 
 ## Google Slides
-You can access the presentation on Google Slides: [GenerativeAI - Chatbot with GPT-4o Mini and Streamlit](https://docs.google.com/presentation/d/1nzKXdxTmdOcXTqsovh9xYfslPyJc6jG6hPX_xBCqUxw/edit?usp=sharing).
+You can access the presentation on Google Slides: [OpenAI Chatbot Implementation with GPT-4o Mini & Streamlit](https://docs.google.com/presentation/d/1nzKXdxTmdOcXTqsovh9xYfslPyJc6jG6hPX_xBCqUxw/edit?usp=sharing).
