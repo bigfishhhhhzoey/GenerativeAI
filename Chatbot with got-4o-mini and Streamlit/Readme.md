@@ -38,7 +38,7 @@ pip install openai streamlit python-dotenv tiktoken
 ### Run the Application
 Use the following command to run the chatbot:
 ```sh
-streamlit run app.py
+streamlit run chatbot.py
 ```
 
 ## Web Interface
