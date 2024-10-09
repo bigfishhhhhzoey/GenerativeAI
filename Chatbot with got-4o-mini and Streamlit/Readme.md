@@ -44,10 +44,15 @@ streamlit run app.py
 ## Web Interface
 The chatbot runs on a Streamlit-based web interface, providing an intuitive UI to interact with the model in real-time. Messages are streamed out to simulate a typing experience.
 
+![Chatbot Interface](images/chatbot_interface.png)
+
 ## Sample Use Cases
 - **Customer Support**: Provide answers to common queries in a human-like conversational manner.
+  ![Chatbot Interface](images/chatbot_use1.png)
 - **Learning Assistant**: Offer explanations and tutorials on specific topics.
+  ![Chatbot Interface](images/chatbot_use2.png)
 - **Personal Companion**: Engage in casual conversations.
+  ![Chatbot Interface](images/chatbot_use3.png)
 
 ## Repository Link
 You can access the full codebase on GitHub: [GenerativeAI - Chatbot with GPT-4o Mini and Streamlit](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Chatbot%20with%20got-4o-mini%20and%20Streamlit).
