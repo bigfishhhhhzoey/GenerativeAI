@@ -130,6 +130,7 @@ The web interface provides an intuitive platform for users to generate and view 
 
 ## Language Selection
 Users can select from the top 30 most popular languages worldwide via a dropdown menu, enabling the application to cater to a global audience.
+
 <img src="images/language.png" alt="language" width="600">
 
 ## Sample Use Cases
