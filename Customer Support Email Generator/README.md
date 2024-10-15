@@ -1,7 +1,3 @@
-Certainly! Here's the updated `README.md` with more details about the design of the project:
-
----
-
 # Customer Support Automation with GPT-based Models
 
 This project is a **Customer Support System** designed for a large electronics store. It leverages GPT-based models to generate customer comments and corresponding email responses. The app supports multi-language capabilities, allowing users to translate comments and emails into the top 30 most popular languages worldwide.
