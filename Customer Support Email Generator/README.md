@@ -25,7 +25,7 @@ The project is designed to automate customer support interactions by simulating 
 ### Flow of Data
 
 1. **User Input**: The user selects a language and translation options on the web interface.
-2. **Comment Generation**: The app generates a customer comment about a product using GPT.
+2. **Comment Generation**: The app generates a customer comment about the store using GPT.
 3. **Email Generation**: An email response is generated based on the comment using the following steps:
    - generate email subject according to the comment
    - generate the summary of customer's comment
