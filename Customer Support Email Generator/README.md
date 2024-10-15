@@ -159,5 +159,5 @@ Here are some sample use cases demonstrating the application's versatility in ha
 You can access the full codebase on GitHub: [Customer Support Email Generator](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator).
 
 ## Google Slides
-You can access the presentation on Google Slides: [Customer Support Email Generator](https://docs.google.com/presentation/d/19wb7PAvCZryy7h71Vm1rI6dMmcIoxuoWxjKitMBSJls/edit?usp=sharing).
+You can access the presentation on Google Slides: [Customer Support System: Comment and Email Response Generator](https://docs.google.com/presentation/d/19wb7PAvCZryy7h71Vm1rI6dMmcIoxuoWxjKitMBSJls/edit?usp=sharing).
 
