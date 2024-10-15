@@ -115,9 +115,14 @@ To get started with this project, follow these steps:
 4. **View Results**: The generated comment and email are displayed side by side. The form retains your selections for convenience.
 
 ## Command Line Execution
-![Generate the Comment](images/command1.png)
-![Analyse the Comment](images/command2.png)
-![Generate the Email](images/command3.png)
+- **Generate the Comment**: 
+![Command line](images/command1.png)
+
+- **Analyse the Comment**:
+![Command line](images/command2.png)
+
+- **Generate the Email**:
+![Command line](images/command3.png)
 
 ## Web Interface
 ![Web Interface](images/web_interface.png)
@@ -128,10 +133,13 @@ To get started with this project, follow these steps:
 ## Sample Use cases
 - **English to English**: 
 ![Web Interface](images/use1.png)
+
 - **English to Spanish**: 
 ![Web Interface](images/use2.png)
+
 - **Vietnamese to English**: 
 ![Web Interface](images/use1.png)
+
 - **Chinese to Chinese**: 
 ![Web Interface](images/use2.png)
 
