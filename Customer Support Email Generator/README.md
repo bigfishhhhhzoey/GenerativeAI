@@ -125,22 +125,25 @@ To get started with this project, follow these steps:
 ![Command line](images/command3.png)
 
 ## Web Interface
+The web interface provides an intuitive platform for users to generate and view customer comments and email responses. It features a clean layout with input options and displays the results side by side for easy comparison.
 ![Web Interface](images/web_interface.png)
 
 ## Language selection
+Users can select from the top 30 most popular languages worldwide via a dropdown menu, enabling the application to cater to a global audience.
 ![Language Menu](images/language.png)
 
 ## Sample Use cases
-- **English to English**: 
+Here are some sample use cases demonstrating the application's versatility in handling different languages and translation options:
+- **English to English**: Generating both the comment and email in English without translation.
 ![Web Interface](images/use1.png)
 
-- **English to Spanish**: 
+- **English to Spanish**: Generating the comment in English and translating the email to Spanish.
 ![Web Interface](images/use2.png)
 
-- **Vietnamese to English**: 
+- **Vietnamese to English**: Generating the comment in Vietnamese and the email in English.
 ![Web Interface](images/use3.png)
 
-- **Chinese to Chinese**: 
+- **Chinese to Chinese**: Generating both the comment and email in Chinese.
 ![Web Interface](images/use4.png)
 
 ## Repository Link
