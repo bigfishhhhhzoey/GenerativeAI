@@ -23,21 +23,17 @@ The project is designed to automate customer support interactions by simulating 
 - **Backend**: Python functions handle the logic for generating comments, analyzing sentiment, and creating email responses.
 - **API Integration**: OpenAI's API is used to interact with the GPT-4 language model for text generation tasks.
 
-### Design Considerations
-
-- **Modularity**: The application is structured with modular functions for each task (e.g., comment generation, sentiment analysis), making it scalable and maintainable.
-- **User Experience**: The web interface is designed to be intuitive, with clear options and immediate feedback. Retaining form inputs enhances usability.
-- **Customization**: The use of templates allows for easy adjustments to the interface, including color schemes and layout changes.
-- **Performance**: API calls are optimized to minimize latency, ensuring a smooth user experience.
-- **Security**: Sensitive information like API keys is managed securely using environment variables and the `python-dotenv` package.
-
 ### Flow of Data
 
 1. **User Input**: The user selects a language and translation options on the web interface.
 2. **Comment Generation**: The app generates a customer comment about a product using GPT.
-3. **Email Generation**: An email response is generated based on the comment, including sentiment analysis.
-4. **Translation**: If selected, the comment and/or email are translated into the chosen language.
-5. **Display Results**: The generated texts are displayed side by side on the web page.
+3. **Email Generation**: An email response is generated based on the comment using the following steps:
+   - generate email subject according to the comment
+   - generate the summary of customer's comment
+   - sentiment analysis of the customer's comment
+   - generate an email to be sent to the customer
+5. **Translation**: If selected, the comment and/or email are translated into the chosen language.
+6. **Display Results**: The generated texts are displayed side by side on the web page.
 
 ### Error Handling
 
