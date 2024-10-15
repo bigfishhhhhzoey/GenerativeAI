@@ -9,7 +9,6 @@ This project is a **Customer Support System** designed for a large electronics s
 - **Multi-language Support**: Translate comments and emails into 30 popular languages.
 - **Interactive Web Interface**: User-friendly web app with a responsive design.
 - **Retained User Inputs**: Form inputs remain after submission for better user experience.
-- **Customizable Design**: Aesthetic inspired by the Morandi color palette with options for further customization.
 
 ## Project Design
 
