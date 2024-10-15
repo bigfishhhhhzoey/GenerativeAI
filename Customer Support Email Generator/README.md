@@ -138,10 +138,10 @@ To get started with this project, follow these steps:
 ![Web Interface](images/use2.png)
 
 - **Vietnamese to English**: 
-![Web Interface](images/use1.png)
+![Web Interface](images/use3.png)
 
 - **Chinese to Chinese**: 
-![Web Interface](images/use2.png)
+![Web Interface](images/use4.png)
 
 ## Repository Link
 You can access the full codebase on GitHub: [Customer Support Email Generator](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator).
