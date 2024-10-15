@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support System</title>
+    <style>
+        /* Same styling as before */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-family: 'Verdana', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6f6dbf;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        select, input[type="checkbox"], button[type="submit"] {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button[type="submit"] {
+            background-color: #7f85f1;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #6f6dbf;
+        }
+
+        .output-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .output-box {
+            width: 48%;
+            background-color: #ecebfa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .output-box h2 {
+            text-align: center;
+            color: #4f4da1;
+        }
+
+        .output-box textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            resize: none;
+        }
+
+        .output-box textarea {
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .output-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .output-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Customer Support System</h1>
+        <form method="POST">
+            <label for="language">Select Language:</label>
+            <select id="language" name="language">
+                {% for lang in top_languages %}
+                    <option value="{{ lang }}" {% if lang == selected_language %}selected{% endif %}>{{ lang }}</option>
+                {% endfor %}
+            </select>
+
+            <label>
+                <input type="checkbox" id="translate_comment" name="translate_comment" {% if translate_comment %}checked{% endif %}>
+                Translate Comment
+            </label>
+            <label>
+                <input type="checkbox" id="translate_email" name="translate_email" {% if translate_email %}checked{% endif %}>
+                Translate Email
+            </label>
+
+            <button type="submit">Generate</button>
+        </form>
+
+        <div class="output-container">
+            <div class="output-box">
+                <h2>Generated Comment</h2>
+                <textarea readonly>{{ comment }}</textarea>
+            </div>
+            <div class="output-box">
+                <h2>Generated Email</h2>
+                <textarea readonly>{{ email }}</textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
