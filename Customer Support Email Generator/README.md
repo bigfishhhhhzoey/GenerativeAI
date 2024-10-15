@@ -114,13 +114,30 @@ To get started with this project, follow these steps:
 
 4. **View Results**: The generated comment and email are displayed side by side. The form retains your selections for convenience.
 
-## Screenshots
+## Command Line Execution
+![Generate the Comment](images/command1.png)
+![Analyse the Comment](images/command2.png)
+![Generate the Email](images/command3.png)
 
-_Add screenshots of your web app here, showing the UI and functionality._
+## Web Interface
+![Web Interface](images/web_interface.png)
+
+## Language selection
+![Language Menu](images/language.png)
+
+## Sample Use cases
+- **English to English**: 
+![Web Interface](images/use1.png)
+- **English to Spanish**: 
+![Web Interface](images/use2.png)
+- **Vietnamese to English**: 
+![Web Interface](images/use1.png)
+- **Chinese to Chinese**: 
+![Web Interface](images/use2.png)
+
+## Repository Link
+You can access the full codebase on GitHub: [Customer Support Email Generator](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator).
 
 ## Google Slides
-
-I have created a **Google Slides presentation** that explains the project, the design considerations, and showcases the features. You can view the slides here:
-
-[Google Slides Presentation](https://your-google-slides-link)
+You can access the presentation on Google Slides: [Customer Support Email Generator](https://docs.google.com/presentation/d/19wb7PAvCZryy7h71Vm1rI6dMmcIoxuoWxjKitMBSJls/edit?usp=sharing).
 
