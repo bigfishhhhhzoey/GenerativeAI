@@ -128,11 +128,11 @@ To get started with this project, follow these steps:
 The web interface provides an intuitive platform for users to generate and view customer comments and email responses. It features a clean layout with input options and displays the results side by side for easy comparison.
 ![Web Interface](images/web_interface.png)
 
-## Language selection
+## Language Selection
 Users can select from the top 30 most popular languages worldwide via a dropdown menu, enabling the application to cater to a global audience.
-![Language Menu](images/language.png)
+<img src="images/language.png" alt="language" width="600">
 
-## Sample Use cases
+## Sample Use Cases
 Here are some sample use cases demonstrating the application's versatility in handling different languages and translation options:
 - **English to English**: Generating both the comment and email in English without translation.
 ![Web Interface](images/use1.png)
