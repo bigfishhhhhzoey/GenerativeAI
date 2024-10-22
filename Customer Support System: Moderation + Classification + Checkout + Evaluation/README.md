@@ -75,9 +75,7 @@ Check if the answer is fact-based.
 Evaluate the response to each question in the question set with its ideal answer and print out the fraction score.
 
 ![test](images/test_eva1.png)
-
 ![test](images/test_eva2.png)
-
 ![test](images/test_eva3.png)
 
 ### Evaluation for Question with Multiple Right Answers
@@ -118,11 +116,18 @@ python3 command_line.py
 
 ### Sample Use Cases:
 
-- **Input Moderation**:
+- **Input Moderation**: The system exits the program once detected inappropriate input.
+
+  ![command](images/command1.png)
   
-- **Prompt Injection Prevention**: The system performs input moderation and checks for prompt injection.
+- **Prompt Injection Prevention**: The system exits the program once detected prompt injection.
+  
+  ![command](images/command2.png)
   
 - **Appropriate Input and Response**: The application analyzes the sentiment of the comment and generates an appropriate chatbot response.
+  
+  ![command](images/command3.png)
+  ![command](images/command4.png)
 
 ---
 
@@ -158,7 +163,15 @@ The Flask web application provides a user-friendly interface for interacting wit
 - **Go Back Button**: After viewing the results, users can return to the home page to try new comments.
 
 ### Sample Use Cases:
+Use generated customer commment.
+![web](images/web1.png)
 
+![web](images/web2.png)
+
+Enter 
+![web](images/web3.png)
+
+![web](images/web4.png)
 
 ---
 
