@@ -55,7 +55,7 @@ Proper classification of customer support queries.
 ![test](images/test_class.png)
 
 ### Chain of Thought Reasoning:
-Provide chain of thought reasoning and 
+Answer customer's query using chain of thought reasoning and then provide final response without the inner monologue.
 
 ![test](images/test_chain.png)
 
