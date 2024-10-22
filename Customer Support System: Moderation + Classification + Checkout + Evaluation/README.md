@@ -168,7 +168,7 @@ Use generated customer commment.
 
 ![web](images/web2.png)
 
-Enter 
+Enter user's own question.
 ![web](images/web3.png)
 
 ![web](images/web4.png)
