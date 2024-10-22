@@ -37,11 +37,25 @@ This project introduces several new features to enhance the robustness of the cu
 
 Here are some test cases with expected outputs, which were used to test the core functionality of this app.
 
-### Input Moderation 
+### Input Moderation:
 For a benign comment, the system should not flag anything, but for inappropriate comments, it should detect and prevent further action.
 
-- **Prompt Injection Prevention**: The system should recognize common prompt injection attempts and flag them appropriately.
-- **Classification**: Proper classification of customer support queries (e.g., "delete my profile" classified as "Account Management").
+### Prompt Injection Prevention:
+The system should recognize common prompt injection attempts and flag them appropriately.
+
+### Classification:
+Proper classification of customer support queries (e.g., "delete my profile" classified as "Account Management").
+
+### Chain of Thoughts Reasoning:
+
+### Output Moderation: 
+After generating a chatbot response, this function checks if the output is appropriate.
+
+### Output Self-Evaluation:
+
+### Evaluation with Rubric
+
+### Evaluation with Ideal Answer
 
 ---
 
