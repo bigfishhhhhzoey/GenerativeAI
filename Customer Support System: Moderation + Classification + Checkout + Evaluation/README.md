@@ -163,15 +163,15 @@ The Flask web application provides a user-friendly interface for interacting wit
 - **Go Back Button**: After viewing the results, users can return to the home page to try new comments.
 
 ### Sample Use Cases:
-Use generated customer commment.
-![web](images/web1.png)
+- Use generated customer commment.
 
-![web](images/web2.png)
+  ![web](images/web1.png)
+  ![web](images/web2.png)
 
-Enter user's own question.
-![web](images/web3.png)
+- Enter user's own question.
+  ![web](images/web3.png)
 
-![web](images/web4.png)
+  ![web](images/web4.png)
 
 ---
 
