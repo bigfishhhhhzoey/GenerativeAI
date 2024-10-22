@@ -169,8 +169,8 @@ The Flask web application provides a user-friendly interface for interacting wit
   ![web](images/web2.png)
 
 - Enter user's own question.
-  ![web](images/web3.png)
 
+  ![web](images/web3.png)
   ![web](images/web4.png)
 
 ---
