@@ -112,7 +112,7 @@ The Flask web application provides a user-friendly interface for interacting wit
 ---
 
 ## Repository Link
-You can access the full codebase on GitHub: [Customer Support System: Moderation, Classification, Checkout, and Evaluation](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20System%3A%20Moderation%20%2B%20Classification%20%2B%20Checkout%20%2B%20Evaluation).
+You can access the full codebase on GitHub: [Customer Support System: Moderation + Classification + Checkout + Evaluation](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20System%3A%20Moderation%20%2B%20Classification%20%2B%20Checkout%20%2B%20Evaluation).
 
 ## Google Slides
-You can access the presentation on Google Slides: [Customer Support System: Moderation, Classification, Checkout, and Evaluation](https://docs.google.com/presentation/d/1aNkuirDzg4_AexxwBFSkM9xpe6tSp32pVLcn5gMjke0/edit?usp=sharing).
+You can access the presentation on Google Slides: [Customer Support System: Moderation, Classification, Checkout, Evaluation](https://docs.google.com/presentation/d/1aNkuirDzg4_AexxwBFSkM9xpe6tSp32pVLcn5gMjke0/edit?usp=sharing).
