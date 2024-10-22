@@ -147,7 +147,7 @@ The Flask web application provides a user-friendly interface for interacting wit
 
 1. Install dependencies:
    ```bash
-   pip install flask python-dotenv openai
+   pip install flask
    ```
 
 2. Run the Flask app:
