@@ -40,22 +40,54 @@ Here are some test cases with expected outputs, which were used to test the core
 ### Input Moderation:
 For a benign comment, the system should not flag anything, but for inappropriate comments, it should detect and prevent further action.
 
+![test](images/test_input1.png)
+
+![test](images/test_input2.png)
+
 ### Prompt Injection Prevention:
 The system should recognize common prompt injection attempts and flag them appropriately.
+
+![test](images/test_prompt.png)
 
 ### Classification:
 Proper classification of customer support queries (e.g., "delete my profile" classified as "Account Management").
 
+![test](images/test_class.png)
+
 ### Chain of Thoughts Reasoning:
+
+![test](images/test_chain.png)
 
 ### Output Moderation: 
 After generating a chatbot response, this function checks if the output is appropriate.
 
+![test](images/test_output1.png)
+
+![test](images/test_output2.png)
+
 ### Output Self-Evaluation:
 
-### Evaluation with Rubric
+![test](images/test_self_eva.png)
 
-### Evaluation with Ideal Answer
+### Evaluation for Question with Single Right Answer
+
+![test](images/test_eva1.png)
+
+![test](images/test_eva2.png)
+
+![test](images/test_eva3.png)
+
+### Evaluation for Question with Multiple Right Answers
+
+#### Evalution with Rubric
+
+![test](images/test_eva4.png)
+
+#### Evalution with Ideal Answers
+
+![test](images/test_eva5.png)
+
+![test](images/test_eva6.png)
 
 ---
 
