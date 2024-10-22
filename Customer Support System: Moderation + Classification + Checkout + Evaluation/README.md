@@ -35,7 +35,7 @@ This project introduces several new features to enhance the robustness of the cu
 
 ## 3. Test Cases
 
-Here are some test cases with expected outputs, which were used to test the core functionality of this app.
+Here are some test cases to test the core functionality of this app.
 
 ### Input Moderation:
 For a benign comment, the system should not flag anything, but for inappropriate comments, it should detect and prevent further action.
