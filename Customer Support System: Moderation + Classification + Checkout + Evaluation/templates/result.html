@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Customer Service Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Chatbot Response Results</h1>
+        
+        {% if results.generated_comment %}
+            <div class="result-step">
+                <h3>Generated Comment:</h3>
+                <p>{{ results.generated_comment }}</p>
+            </div>
+        {% endif %}
+        
+        <div class="result-step">
+            <h3>Step 1: Input Moderation</h3>
+            <p>{{ results.input_moderation }}</p>
+        </div>
+
+        <div class="result-step">
+            <h3>Step 2: Prevent Prompt Injection</h3>
+            <p>{{ results.prompt_injection }}</p>
+        </div>
+
+        <div class="result-step">
+            <h3>Step 3: Sentiment Analysis</h3>
+            <p>{{ results.sentiment_analysis }}</p>
+        </div>
+
+        <div class="result-step">
+            <h3>Step 4: Chatbot Response</h3>
+            <p>{{ results.chatbot_response }}</p>
+        </div>
+
+        <div class="result-step">
+            <h3>Step 5: Output Moderation</h3>
+            <p>{{ results.output_moderation }}</p>
+        </div>
+
+        <div class="result-step">
+            <h3>Step 6: Response Evaluation</h3>
+            <p>{{ results.evaluation }}</p>
+        </div>
+
+        <a href="/" class="go-back-btn">Go Back</a>
+    </div>
+</body>
+</html>

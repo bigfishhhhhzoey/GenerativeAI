@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Service Chatbot</h1>
+        
+        <!-- Flash messages for notifications -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form action="/" method="POST">
+            <h2>Step 1: Comment Input</h2>
+            <label>Would you like to use a generated comment?</label><br>
+            <input type="radio" id="yes" name="use_generated" value="yes"> Yes
+            <input type="radio" id="no" name="use_generated" value="no" checked> No<br><br>
+
+            <div id="custom-comment">
+                <label for="user_comment">Enter your comment:</label><br>
+                <textarea name="user_comment" id="user_comment" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <h2>Step 2: Language Options</h2>
+            <label for="comment_language">Choose a language for the generated comment:</label>
+            <select name="comment_language" id="comment_language">
+                {% for language in languages %}
+                    <option value="{{ language }}">{{ language }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="response_language">Choose a language for the chatbot response:</label>
+            <select name="response_language" id="response_language">
+                {% for language in languages %}
+                    <option value="{{ language }}">{{ language }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

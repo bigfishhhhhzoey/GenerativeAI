@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    background-color: #e7f3fe;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea, select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flashes .info {
+    background-color: #e7f3fe;
+    color: #31708f;
+}
+
+.flashes .danger {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Styling for results page */
+.result-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.result-step {
+    margin-bottom: 20px;
+    border-left: 5px solid #4CAF50;
+    padding-left: 15px;
+}
+
+.result-step h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #4CAF50;
+}
+
+.result-step p {
+    font-size: 1em;
+    color: #333;
+}
+
+.go-back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.go-back-btn:hover {
+    background-color: #45a049;
+}
