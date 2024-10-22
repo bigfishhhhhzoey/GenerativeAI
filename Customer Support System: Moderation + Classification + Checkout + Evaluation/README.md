@@ -67,10 +67,12 @@ After generating a chatbot response, this function checks if the output is appro
 ![test](images/test_output2.png)
 
 ### Output Self-Evaluation:
+Check if the answer is fact-based.
 
 ![test](images/test_self_eva.png)
 
 ### Evaluation for Question with Single Right Answer
+Evaluate the response to each question in the question set with its ideal answer and print out the fraction score.
 
 ![test](images/test_eva1.png)
 
@@ -81,10 +83,12 @@ After generating a chatbot response, this function checks if the output is appro
 ### Evaluation for Question with Multiple Right Answers
 
 #### Evalution with Rubric
+Using predefined guidelines to assess the quality and performance of the response.
 
 ![test](images/test_eva4.png)
 
 #### Evalution with Ideal Answers
+Compare the response with the ideal answer.
 
 ![test](images/test_eva5.png)
 
