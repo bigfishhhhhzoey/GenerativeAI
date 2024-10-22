@@ -8,14 +8,14 @@ This project is an extension of a **Customer Comment and Response Generator** ap
 
 ## 1. Link to Previous App
 
-### [Customer Comment and Response Generator](./https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/)
+### [Customer Comment and Response Generator](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/)
 
 The original **Customer Comment and Response Generator** app was designed to generate customer comments and email responses based on product information. It allowed users to interact with an AI model to generate feedback on electronic products. This system included:
 - A user-friendly input system for providing product data
 - Generation of customer comments and email subjects based on that data
 - Sentiment analysis of customer comments
 
-You can explore the previous version [here](./https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/).
+You can explore the previous version [here](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/).
 
 ---
 
