@@ -1,7 +1,3 @@
-Here’s a suggested `README.md` structure for your project:
-
----
-
 # Customer Support System: Moderation, Classification, Checkout, and Evaluation
 
 This project is an extension of a **Customer Comment and Response Generator** app that now incorporates robust features like **moderation**, **classification**, **sentiment analysis**, **prompt injection prevention**, **chatbot response generation**, **output moderation**, and **response evaluation**. The system offers a streamlined experience for users through both a command-line interface and a Flask-based web interface.
