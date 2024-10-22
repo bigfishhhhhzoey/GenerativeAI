@@ -50,11 +50,12 @@ The system should recognize common prompt injection attempts and flag them appro
 ![test](images/test_prompt.png)
 
 ### Classification:
-Proper classification of customer support queries (e.g., "delete my profile" classified as "Account Management").
+Proper classification of customer support queries.
 
 ![test](images/test_class.png)
 
-### Chain of Thoughts Reasoning:
+### Chain of Thought Reasoning:
+Provide chain of thought reasoning and 
 
 ![test](images/test_chain.png)
 
