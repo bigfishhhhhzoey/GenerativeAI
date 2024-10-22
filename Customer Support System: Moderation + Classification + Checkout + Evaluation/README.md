@@ -35,15 +35,6 @@ This project introduces several new features to enhance the robustness of the cu
 6. **Evaluation**: This feature evaluates the chatbot’s response to ensure it is factually correct and satisfies the customer’s query.
 7. **Language Support**: The system supports 30 of the most commonly spoken languages for both input comment generation and chatbot responses.
 
-### System Workflow:
-
-1. **Input Moderation**: The system first checks for any inappropriate or flagged content in the input.
-2. **Prompt Injection Prevention**: Next, it scans for any malicious prompt injection attempts.
-3. **Sentiment Analysis**: Sentiment analysis is performed on the input to understand the emotional context.
-4. **Chatbot Response Generation**: A chatbot response is generated based on the sentiment and input.
-5. **Output Moderation**: The response is checked to ensure it does not contain inappropriate or harmful content.
-6. **Evaluation**: Finally, the response is evaluated for accuracy and completeness.
-
 ---
 
 ## 3. Test Cases
@@ -62,18 +53,29 @@ For a benign comment, the system should not flag anything, but for inappropriate
 
 The command-line application combines the features of the original customer comment and response generator with the newly added moderation, classification, and evaluation functionalities. 
 
+### System Workflow:
+
+1. **Generate Comments**: Users can choose to generate customer comments in one of 30 languages.
+2. **Input Moderation**: The system first checks for any inappropriate or flagged content in the input.
+3. **Prompt Injection Prevention**: Next, it scans for any malicious prompt injection attempts.
+4. **Sentiment Analysis**: Sentiment analysis is performed on the input to understand the emotional context.
+5. **Chatbot Response Generation**: A chatbot response is generated based on the sentiment and input.
+6. **Output Moderation**: The response is checked to ensure it does not contain inappropriate or harmful content.
+7. **Evaluation**: Finally, the response is evaluated for accuracy and completeness.
+
 ### To Run:
 
 ```bash
 python3 command_line.py
 ```
 
-### Features:
+### Sample Use Cases:
 
-- **Generate Comments**: Users can choose to generate customer comments in one of 30 languages.
-- **Moderation and Prompt Injection Prevention**: The system performs input moderation and checks for prompt injection.
-- **Sentiment Analysis and Response**: The application analyzes the sentiment of the comment and generates an appropriate chatbot response.
-- **Evaluation**: The system evaluates the response and provides feedback on its accuracy and appropriateness.
+- **Input Moderation**:
+  
+- **Prompt Injection Prevention**: The system performs input moderation and checks for prompt injection.
+  
+- **Appropriate Input and Response**: The application analyzes the sentiment of the comment and generates an appropriate chatbot response.
 
 ---
 
@@ -108,6 +110,13 @@ The Flask web application provides a user-friendly interface for interacting wit
 - **Step-by-Step Interaction**: Each step of the process (input moderation, sentiment analysis, response generation, etc.) is shown to the user with clear feedback.
 - **Go Back Button**: After viewing the results, users can return to the home page to try new comments.
 
+### Sample Use Cases:
+
+
 ---
 
-Enjoy exploring the **Customer Support System: Moderation, Classification, Checkout, and Evaluation** app!
+## Repository Link
+You can access the full codebase on GitHub: [Customer Support System: Moderation, Classification, Checkout, and Evaluation](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20System%3A%20Moderation%20%2B%20Classification%20%2B%20Checkout%20%2B%20Evaluation).
+
+## Google Slides
+You can access the presentation on Google Slides: [Customer Support System: Moderation, Classification, Checkout, and Evaluation](https://docs.google.com/presentation/d/1aNkuirDzg4_AexxwBFSkM9xpe6tSp32pVLcn5gMjke0/edit?usp=sharing).
