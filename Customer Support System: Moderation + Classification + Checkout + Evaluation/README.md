@@ -50,7 +50,7 @@ The system should recognize common prompt injection attempts and flag them appro
 ![test](images/test_prompt.png)
 
 ### Classification:
-Proper classification of customer support queries.
+Properly classify customer support queries to handle different cases.
 
 ![test](images/test_class.png)
 
@@ -60,7 +60,7 @@ Answer customer's query using chain of thought reasoning and then provide final 
 ![test](images/test_chain.png)
 
 ### Output Moderation: 
-After generating a chatbot response, this function checks if the output is appropriate.
+After generating a chatbot response, check if the output is appropriate.
 
 ![test](images/test_output1.png)
 
@@ -81,7 +81,7 @@ Evaluate the response to each question in the question set with its ideal answer
 ### Evaluation for Question with Multiple Right Answers
 
 #### Evaluation with Rubric
-Using predefined guidelines to assess the quality and performance of the response.
+Use predefined guidelines to assess the quality and performance of the response.
 
 ![test](images/test_eva4.png)
 
