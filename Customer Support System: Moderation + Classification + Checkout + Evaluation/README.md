@@ -23,7 +23,7 @@ This project introduces several new features to enhance the robustness of the cu
 
 ### Features
 
-1. **Moderation**: Ensures that input and output are appropriate and safe for processing. It flags inappropriate language in customer comments or responses.
+1. **Input Moderation**: Ensures that input is appropriate and safe for processing. It flags inappropriate language in customer comments.
 2. **Prompt Injection Prevention**: Detects potential prompt injection attacks in user inputs and halts execution to prevent malicious exploitation.
 3. **Sentiment Analysis**: Analyzes the sentiment of customer comments to help understand the emotional tone of the feedback.
 4. **Chatbot Response Generation**: Generates contextually appropriate and helpful chatbot responses based on the analyzed comment.
