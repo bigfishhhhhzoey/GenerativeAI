@@ -1,6 +1,6 @@
 # Customer Support System: Moderation, Classification, Checkout, and Evaluation
 
-This project is an extension of a **Customer Comment and Response Generator** app that now incorporates robust features like **moderation**, **classification**, **sentiment analysis**, **prompt injection prevention**, **chatbot response generation**, **output moderation**, and **response evaluation**. The system offers a streamlined experience for users through both a command-line interface and a Flask-based web interface.
+This project is an extension of a **Customer Comment and Response Generator** app that now incorporates robust features like **moderation**, **prompt injection prevention**, **classification**, **chain of thought reasoning**, **output moderation**, and **response evaluation**. The system offers a streamlined experience for users through both a command-line interface and a Flask-based web interface.
 
 ## 1. Prerequisite App
 
@@ -11,6 +11,7 @@ The previous **Customer Comment and Response Generator** app was designed to gen
 - Generation of customer comments based on that data
 - Sentiment analysis and summary of customer comments
 - Generation email subjects and content based on the analysis
+- Support with 30 of the most commonly spoken languages
 
 You can explore the app [here](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/).
 
@@ -29,7 +30,6 @@ This project introduces several new features to enhance the robustness of the cu
 3. **Chain of Thought Reasoning**: Generates contextually appropriate and helpful chatbot responses based on the analyzed comment.
 4. **Output Moderation**: After generating a chatbot response, this function checks if the output is appropriate.
 5. **Evaluation**: This feature evaluates the chatbot’s response to ensure it is factually correct and satisfies the customer’s query.
-6. **Language Support**: The system supports 30 of the most commonly spoken languages for both input comment generation and chatbot responses.
 
 ---
 
