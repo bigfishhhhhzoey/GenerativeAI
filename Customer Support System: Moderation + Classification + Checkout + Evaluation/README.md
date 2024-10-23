@@ -8,8 +8,9 @@ This project is an extension of a **Customer Comment and Response Generator** ap
 
 The previous **Customer Comment and Response Generator** app was designed to generate customer comments and email responses based on product information. It allowed users to interact with an AI model to generate feedback on electronic products. This system included:
 - A user-friendly input system for providing product data
-- Generation of customer comments and email subjects based on that data
-- Sentiment analysis of customer comments
+- Generation of customer comments based on that data
+- Sentiment analysis and summary of customer comments
+- Generation email subjects and content based on the analysis
 
 You can explore the app [here](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Customer%20Support%20Email%20Generator/).
 
@@ -23,13 +24,12 @@ This project introduces several new features to enhance the robustness of the cu
 
 ### Features
 
-1. **Input Moderation**: Ensures that input is appropriate and safe for processing. It flags inappropriate language in customer comments.
+1. **Input Moderation**: Uses moderation API to ensure that input is appropriate and safe for processing. It flags inappropriate language in customer comments.
 2. **Prompt Injection Prevention**: Detects potential prompt injection attacks in user inputs and halts execution to prevent malicious exploitation.
-3. **Sentiment Analysis**: Analyzes the sentiment of customer comments to help understand the emotional tone of the feedback.
-4. **Chatbot Response Generation**: Generates contextually appropriate and helpful chatbot responses based on the analyzed comment.
-5. **Output Moderation**: After generating a chatbot response, this function checks if the output is appropriate.
-6. **Evaluation**: This feature evaluates the chatbot’s response to ensure it is factually correct and satisfies the customer’s query.
-7. **Language Support**: The system supports 30 of the most commonly spoken languages for both input comment generation and chatbot responses.
+3. **Chain of Thought Reasoning**: Generates contextually appropriate and helpful chatbot responses based on the analyzed comment.
+4. **Output Moderation**: After generating a chatbot response, this function checks if the output is appropriate.
+5. **Evaluation**: This feature evaluates the chatbot’s response to ensure it is factually correct and satisfies the customer’s query.
+6. **Language Support**: The system supports 30 of the most commonly spoken languages for both input comment generation and chatbot responses.
 
 ---
 
