@@ -80,12 +80,12 @@ Evaluate the response to each question in the question set with its ideal answer
 
 ### Evaluation for Question with Multiple Right Answers
 
-#### Evalution with Rubric
+#### Evaluation with Rubric
 Using predefined guidelines to assess the quality and performance of the response.
 
 ![test](images/test_eva4.png)
 
-#### Evalution with Ideal Answers
+#### Evalutaion with Ideal Answers
 Compare the response with the ideal answer.
 
 ![test](images/test_eva5.png)
