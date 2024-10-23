@@ -85,7 +85,7 @@ Using predefined guidelines to assess the quality and performance of the respons
 
 ![test](images/test_eva4.png)
 
-#### Evalutaion with Ideal Answers
+#### Evaluation with Ideal Answers
 Compare the response with the ideal answer.
 
 ![test](images/test_eva5.png)
