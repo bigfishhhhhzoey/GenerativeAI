@@ -37,7 +37,7 @@ This project is an interactive **Describe-and-Generate Game** built using Gradio
 Install the necessary Python libraries with:
 
 ```bash
-pip install gradio requests pillow python-dotenv
+pip install gradio gtts requests pillow python-dotenv
 ```
 
 ### Hugging Face API Key
