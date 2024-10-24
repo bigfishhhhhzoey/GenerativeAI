@@ -1,17 +1,26 @@
-# Describe-and-Generate Game
+# Describe-and-Generate Game with Gradio
 
-This project is a simple **Describe-and-Generate game** built using Python, Hugging Face API, and Gradio. It allows users to upload an image, generate a caption for the image (using Image-to-Text), and use that caption to generate new images (using Text-to-Image). This interactive game helps in understanding how AI models can be used to describe images and generate new content based on those descriptions.
+## Overview
+This project is an interactive **Describe-and-Generate Game** built using Gradio, Hugging Face APIs, and Python. The game allows users to upload an image, generate a caption for the image, convert the caption to an audio output, and even generate a new image based on the caption.
 
 ## Features
+1. **Image Captioning**: Upload an image and generate a text caption describing the image using the `Salesforce/blip-image-captioning-large` model for image-to-text (ITT).
+2. **Audio Output**: Convert the generated caption into audio using Google Text-to-Speech (gTTS).
+3. **Image Generation**: Use the generated caption to create a new image using the `stabilityai/stable-diffusion-3.5-large` model.
+4. **Interactive Interface**: An easy-to-use interface built using Gradio Blocks.
+1. **Image Captioning**: Upload an image and generate a text caption describing the image using Hugging Face's image-to-text model.
+2. **Audio Output**: Convert the generated caption into audio using Google Text-to-Speech (gTTS).
+3. **Image Generation**: Use the generated caption to create a new image.
+4. **Interactive Interface**: An easy-to-use interface built using Gradio Blocks.
 
-1. **Image-to-Text Captioning**: Upload an image, and the app will generate a descriptive caption using a pre-trained Hugging Face model.
-2. **Text-to-Image Generation**: Based on the generated caption or a custom text prompt, the app generates a new image.
-3. **Combined Workflow**: Upload an image, generate a caption, and then automatically generate a new image based on the caption—all in one step.
-
-## How It Works
-
-1. **Image-to-Text (ITT)**: Converts an uploaded image into a descriptive caption using a Hugging Face model.
-2. **Text-to-Image (TTI)**: Converts a text description (prompt) into an image using Hugging Face's text-to-image generation API.
+## Technologies Used
+- **Models Used**: 
+  - **Image Captioning**: `Salesforce/blip-image-captioning-large` (ITT)
+  - **Image Generation**: `stabilityai/stable-diffusion-3.5-large` (TTI)
+- **Gradio**: For building the interactive UI.
+- **Hugging Face APIs**: For image-to-text (ITT) and text-to-image (TTI) functionalities.
+- **gTTS**: To convert generated text captions to audio.
+- **Python**: The main language for building the game.
 
 ## Setup
 
@@ -48,29 +57,21 @@ Make sure to replace `your_hugging_face_api_key` and model URLs with your actual
 After setting up the environment variables and installing the necessary packages, run the Python script to start the Gradio app:
 
 ```bash
-python your_app.py
+python image_process.py
 ```
 
 The app will launch in your web browser, and you can start uploading images and generating captions and new images.
 
-## How to Play
+## Usage
+- **Upload an Image**: Upload your first image to the Gradio interface.
+- **Generate Caption**: Click on the "Generate Caption" button to see a description of your uploaded image.
+- **Audio Output**: Convert the generated caption to audio by using the audio output block.
+- **Generate Image**: Create a new image based on the generated caption.
 
-1. Upload an image.
-2. Click **Generate Caption** to generate a textual description of the image.
-3. Click **Generate Image** to create a new image based on the generated caption.
-4. Alternatively, use the **Caption and Generate** button to do both steps in one go!
+## Project Walkthrough
+- **Basic Game**: Initially, users can upload an image and generate a caption using the ITT model.
+- **Image Generation**: Added functionality to create a new image based on the generated caption using TTI.
+- **Caption Audio Output**: Finally, added a feature to convert the generated caption to speech for better engagement.
 
-## Example Workflow
-
-1. Upload an image (e.g., a picture of a cat).
-2. The app generates a caption like *"A cute orange tabby cat sitting on a windowsill."*
-3. Based on this caption, the app generates a new image—perhaps of another cat in a similar pose.
-
-## Project Files
-
-- **`your_app.py`**: Main script for running the Gradio app.
-- **`.env`**: Environment file containing Hugging Face API key and model endpoints.
-
-## Resources
-
-- [Hugging Face Gradio Lesson](https://learn.deeplearning.ai/courses/huggingface-gradio/lesson/5/describe-and-generate-game)
+## Reference
+This project follows the lessons from the **[Hugging Face and Gradio Course - Describe and Generate Game](https://learn.deeplearning.ai/courses/huggingface-gradio/lesson/5/describe-and-generate-game)**. Additional functionality was added to improve the user experience by including audio output.
