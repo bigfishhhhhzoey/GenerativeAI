@@ -74,11 +74,11 @@ The app will launch in your web browser, and you can start uploading images and 
 - **Generate Image**: Create a new image based on the generated caption.
 
 ## Web Interface
-![web](images/web1)
+![web](images/web1.png)
 
-![web](images/web2)
+![web](images/web2.png)
 
-![web](images/web3)
+![web](images/web3.png)
 
 ## Reference
 This project follows the lessons from the **[Hugging Face and Gradio Course - Describe and Generate Game](https://learn.deeplearning.ai/courses/huggingface-gradio/lesson/5/describe-and-generate-game)**. Additional functionality was added to improve the user experience by including audio output.
