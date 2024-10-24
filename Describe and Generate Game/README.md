@@ -76,8 +76,8 @@ The app will launch in your web browser, and you can start uploading images and 
 ## Web Interface
 ![web](images/web1.png)
 
+## Sample Generation Result
 ![web](images/web2.png)
-
 ![web](images/web3.png)
 
 ## Reference
