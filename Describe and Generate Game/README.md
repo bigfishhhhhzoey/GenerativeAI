@@ -22,6 +22,11 @@ This project is an interactive **Describe-and-Generate Game** built using Gradio
 - **gTTS**: To convert generated text captions to audio.
 - **Python**: The main language for building the game.
 
+## Project Walkthrough
+- **Basic Game**: Initially, users can upload an image and generate a caption using the ITT model.
+- **Image Generation**: Added functionality to create a new image based on the generated caption using TTI.
+- **Caption Audio Output**: Finally, added a feature to convert the generated caption to speech for better engagement.
+  
 ## Setup
 
 ### Prerequisites
@@ -68,10 +73,12 @@ The app will launch in your web browser, and you can start uploading images and 
 - **Audio Output**: Convert the generated caption to audio by using the audio output block.
 - **Generate Image**: Create a new image based on the generated caption.
 
-## Project Walkthrough
-- **Basic Game**: Initially, users can upload an image and generate a caption using the ITT model.
-- **Image Generation**: Added functionality to create a new image based on the generated caption using TTI.
-- **Caption Audio Output**: Finally, added a feature to convert the generated caption to speech for better engagement.
+## Web Interface
+![web](images/web1)
+
+![web](images/web2)
+
+![web](images/web3)
 
 ## Reference
 This project follows the lessons from the **[Hugging Face and Gradio Course - Describe and Generate Game](https://learn.deeplearning.ai/courses/huggingface-gradio/lesson/5/describe-and-generate-game)**. Additional functionality was added to improve the user experience by including audio output.
