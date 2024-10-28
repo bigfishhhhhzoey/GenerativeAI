@@ -62,7 +62,7 @@ Make sure to replace `your_hugging_face_api_key` and model URLs with your actual
 After setting up the environment variables and installing the necessary packages, run the Python script to start the Gradio app:
 
 ```bash
-python image_process.py
+python3 image_process.py
 ```
 
 The app will launch in your web browser, and you can start uploading images and generating captions and new images.
