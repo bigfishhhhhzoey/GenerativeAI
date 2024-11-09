@@ -102,22 +102,22 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 - You can delete all conversations by clicking **Clear History**.
 
 ### Example Use Cases
-- Initial question asking about schlarship options from the university catalog
+- Initial question asking about schlarship options from the university catalog.
   ![Sample Question](images/web1.png)
 
-- Follow-up question to get more details about specific scholarships
+- Follow-up question to get more details about specific scholarships.
   ![Follow-Up Question](images/web2.png)
 
-- View all chat history
+- View all chat history.
   ![Chat History](images/web3.png)
 
-- Clear all chat history
+- Clear all chat history by clicking **Clear History**.
   ![Clear History](images/web4.png)
 
-- Document uploading page
+- Document uploading page.
   ![Document Upload](images/web5.png)
   
-- Answer a question based on newly updated document
+- Answer a question based on newly updated document.
   ![Answer Question](images/web6.png)
   ![Answer Question](images/web7.png)
   ![Answer Question](images/web8.png)
