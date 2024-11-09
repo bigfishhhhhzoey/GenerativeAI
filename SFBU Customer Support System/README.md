@@ -31,36 +31,23 @@ This step focuses on using a question-answering (QA) system with a retrieval-aug
   - Instead of using the traditional RetrievalQA chain, we utilize the updated `create_retrieval_chain` module from LangChain.
   - A **Prompt Template** is created to ensure the responses are concise and accurate.
 #### Steps:
-  1. Define a prompt template using `ChatPromptTemplate`.
-  2. Combine documents using `create_stuff_documents_chain`.
-  3. Execute the QA chain using `create_retrieval_chain`.
+1. Define a prompt template using `ChatPromptTemplate`.
+2. Combine documents using `create_stuff_documents_chain`.
+3. Execute the QA chain using `create_retrieval_chain`.
 
 ### Step 6: Conversational Retrieval Chain (Updated)
 In this step, we integrate a conversational retrieval chain into our chatbot using updated LangChain memory management. 
 #### Updated Approach:
-Instead of the traditional `ConversationBufferMemory`, we utilize the new memory system for better handling of chat history.
-
-**Key Modules**: 
-- `create_history_aware_retriever`, `create_retrieval_chain`, `ChatOpenAI`, `MemorySaver`, `StateGraph`
-
+  - Instead of the traditional `ConversationBufferMemory`, we utilize the new memory system for better handling of chat history.
+  - **Key Modules**: `create_history_aware_retriever`, `create_retrieval_chain`, `ChatOpenAI`, `MemorySaver`, `StateGraph`
 #### Steps:
-1. **Create a Contextual Retriever**:
-   - We generate contextualized questions using `create_history_aware_retriever`, ensuring follow-up questions are understood within the chat context.
-   
-2. **Define System Prompt**:
-   - A system prompt is created with `ChatPromptTemplate` to generate accurate and concise answers based on retrieved content.
-
-3. **Build the Conversational QA Chain**:
-   - We leverage `create_stuff_documents_chain` and `create_retrieval_chain` to construct a QA chain that fetches relevant information from the vector database.
-
-4. **Memory Management**:
-   - Uses `MemorySaver` for chat history, managed through a `StateGraph` and `State` schema to ensure continuity in conversations.
-
-5. **State Management**:
-   - The chatbot uses `StateGraph` for conversation flow:
-     - The `call_model` function retrieves answers while referencing the conversation history.
-     - `MemorySaver` is used to persist chat interactions.
-
+1. **Create a Contextual Retriever**: We generate contextualized questions using `create_history_aware_retriever`, ensuring follow-up questions are understood within the chat context.
+2. **Define System Prompt**: A system prompt is created with `ChatPromptTemplate` to generate accurate and concise answers based on retrieved content.
+3. **Build the Conversational QA Chain**: We leverage `create_stuff_documents_chain` and `create_retrieval_chain` to construct a QA chain that fetches relevant information from the vector database.
+4. **Memory Management**: Uses `MemorySaver` for chat history, managed through a `StateGraph` and `State` schema to ensure continuity in conversations.
+5. **State Management**: The chatbot uses `StateGraph` for conversation flow:
+  - The `call_model` function retrieves answers while referencing the conversation history.
+  - `MemorySaver` is used to persist chat interactions.
 #### Resources
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
 - [Conversation Buffer Memory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_memory/)
