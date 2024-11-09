@@ -26,7 +26,7 @@ We start by setting up the RAG (Retrieval-Augmented Generation) architecture, wh
 - Utilize OpenAI's GPT-4 model to generate responses based on the retrieved chunks.
 
 ### Step 5: RetrievalQA Chain (Updated)
-This step focuses on using a question-answering (QA) system with a retrieval-augmented approach.
+This step focuses on using a question-answering (QA) system with a retrieval-augmented approach. It's optional but useful if you want to implement a non-conversational retrieval QA system.
 #### Updated Approach:
   - Instead of using the traditional RetrievalQA chain, we utilize the updated `create_retrieval_chain` module from LangChain.
   - A **Prompt Template** is created to ensure the responses are concise and accurate.
