@@ -10,20 +10,24 @@ The project is broken down into several steps, as described below:
 
 ### Step 1: Overview of RAG Workflow
 We start by setting up the RAG (Retrieval-Augmented Generation) architecture, which combines retrieval of relevant content from stored documents with a language model to generate responses. This approach ensures more accurate, context-aware responses.
+![RAG](images/rag.jpeg)
 
 ### Step 2: Load Documents and Create VectorDB (Vectorstore)
 - **LangChain Modules Used**: `PyPDFLoader`, `WebBaseLoader`, `YoutubeAudioLoader`
 - Load various types of documents (PDFs, web pages, YouTube transcripts) using `LangChain` document loaders.
 - Split the documents into manageable chunks using the `RecursiveCharacterTextSplitter`.
 - Store the embedded chunks in a **Chroma vector database** for efficient retrieval during user interactions.
+![Document Loading and Vectorstore](images/vector1.png)
 
 ### Step 3: Similarity Search to Select Relevant Chunks
 - **LangChain Module Used**: `Chroma`
 - Perform a similarity search using `vectordb.as_retriever()` to fetch the most relevant document chunks based on the user query.
+![Similarity Search](images/vector2.png)
 
 ### Step 4: Create a Large Language Model (LLM)
 - **LangChain Module Used**: `ChatOpenAI`
 - Utilize OpenAI's GPT-4 model to generate responses based on the retrieved chunks.
+![LLM](images/llm.png)
 
 ### Step 5: RetrievalQA Chain (Updated)
 This step focuses on using a question-answering (QA) system with a retrieval-augmented approach. It's optional but useful if you want to implement a non-conversational retrieval QA system.
@@ -34,6 +38,7 @@ This step focuses on using a question-answering (QA) system with a retrieval-aug
 1. Define a prompt template using `ChatPromptTemplate`.
 2. Combine documents using `create_stuff_documents_chain`.
 3. Execute the QA chain using `create_retrieval_chain`.
+![QA](images/qa.png)
 
 ### Step 6: Conversational Retrieval Chain (Updated)
 In this step, we integrate a conversational retrieval chain into our chatbot using updated LangChain memory management. 
@@ -51,7 +56,8 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 #### Resources
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
 - [Conversation Buffer Memory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_memory/)
- 
+![chain](images/chain.png)
+
 ### Step 7: Building the Chatbot with a Web-Based UI
 - **Tech Stack**: Python, LangChain, OpenAI, Chroma, Panel, Param
 - **Modules Used**: `Panel`, `param`, `ChatOpenAI`, `InMemoryVectorStore`
