@@ -63,7 +63,7 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
    - The `call_model` function retrieves answers while referencing the conversation history.
    - `MemorySaver` is used to persist chat interactions.
     
-#### Resources
+#### Resources:
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
 - [Conversation Buffer Memory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_memory/)
 
@@ -132,8 +132,11 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
   ![Document Upload](images/web5.png)
   
 - Answer a question based on newly updated document.
+  - Initially the chatbot couldn't answer this question.
   ![Answer Question](images/web6.png)
+  - We then upload a web URL containing this information.
   ![Answer Question](images/web7.png)
+  - The chatbot can answer this question now!
   ![Answer Question](images/web8.png)
   
 ---
