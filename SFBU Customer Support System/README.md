@@ -85,8 +85,8 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 
 1. **Clone the repository**:
    ```bash
-   git clone [YOUR REPOSITORY LINK]
-   cd document-based-chatbot
+   git clone [https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System]
+   cd SFBU Customer Support System
    ```
 2. **Set up your `.env` file** with your OpenAI API key:
    ```
@@ -151,6 +151,8 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 - **WebBaseLoader**: Extracting content from web pages
 - **YoutubeAudioLoader**: Extracting and processing audio transcripts from YouTube
 
-## Repository and Presentation Links
-- **GitHub Repository**: [Repository Link](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System)
-- **Google Slides Presentation**: [Google Slides](https://docs.google.com/presentation/d/19YKI3OSkskC-41TqtYMopzYDWjOZRxx0G6OQM1MW-k4/edit?usp=sharing)
+## Repository Link
+You can access the full codebase on GitHub: [SFBU Customer Support System](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System).
+
+## Google Slides
+You can access the presentation on Google Slides: [SFBU Customer Support System](https://docs.google.com/presentation/d/19YKI3OSkskC-41TqtYMopzYDWjOZRxx0G6OQM1MW-k4/edit?usp=sharing).
