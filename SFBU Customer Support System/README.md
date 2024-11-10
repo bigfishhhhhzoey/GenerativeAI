@@ -60,8 +60,8 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 3. **Build the Conversational QA Chain**: We leverage `create_stuff_documents_chain` and `create_retrieval_chain` to construct a QA chain that fetches relevant information from the vector database.
 4. **Memory Management**: Uses `MemorySaver` for chat history, managed through a `StateGraph` and `State` schema to ensure continuity in conversations.
 5. **State Management**: The chatbot uses `StateGraph` for conversation flow:
-  - The `call_model` function retrieves answers while referencing the conversation history.
-  - `MemorySaver` is used to persist chat interactions.
+   - The `call_model` function retrieves answers while referencing the conversation history.
+   - `MemorySaver` is used to persist chat interactions.
     
 #### Resources
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
