@@ -10,7 +10,7 @@ The project is broken down into several steps, each demonstrated in dedicated Ju
 
 - **Step 1-3**: Loading documents, creating the VectorDB, and performing similarity search are demonstrated in [**3-1_load_and_embed.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-1_load_and_embed.ipynb).
 - **Step 4-6**: Creating the LLM, constructing the QA chain, and setting up the ConversationalRetrievalChain are illustrated in [**3-2_chat_with_history.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-2_chat_with_history.ipynb).
-- **Step 7**: Building the chatbot interface with document retrieval capabilities is covered in detail in [**3-3_chatbot.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-3_chatbot.ipynb). The user interaction and document retrieval features will be demonstrated in the next section.
+- **Step 7**: Building the chatbot interface with document retrieval capabilities is covered in detail in [**3-3_chatbot.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-3_chatbot.ipynb), with the executable Python script in [**chatbot.py**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/chatbot.py). The user interaction and document retrieval features will be demonstrated in the next section.
 
 ### Step 1: Overview of RAG Workflow
 We start by setting up the RAG (Retrieval-Augmented Generation) architecture, which combines retrieval of relevant content from stored documents with a language model to generate responses. This approach ensures more accurate, context-aware responses.
