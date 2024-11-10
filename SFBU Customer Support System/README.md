@@ -62,6 +62,7 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 5. **State Management**: The chatbot uses `StateGraph` for conversation flow:
   - The `call_model` function retrieves answers while referencing the conversation history.
   - `MemorySaver` is used to persist chat interactions.
+    
 #### Resources
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
 - [Conversation Buffer Memory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_memory/)
