@@ -80,7 +80,6 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
    - Features include text input for user questions, real-time response display, and chat history management.
    - A **Clear History** button allows users to reset conversations.
 
-
 ## How to Run the Project
 
 1. **Download the [chatbot.py](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/chatbot.py) app**:
@@ -93,7 +92,6 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
    ```bash
    panel serve chatbot.py --autoreload
    ```
-
 
 ## Using the Web Interface
 
@@ -136,8 +134,6 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
   ![Answer Question](images/web7.png)
   - The chatbot can answer this question now!
   ![Answer Question](images/web8.png)
-  
----
 
 ## Tech Stack
 - **Python 3.11**
