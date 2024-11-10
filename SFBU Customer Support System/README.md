@@ -83,10 +83,9 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 
 ## How to Run the Project
 
-1. **Clone the repository**:
+1. **Clone the app**:
    ```bash
-   git clone https://github.com/bigfishhhhhzoey/GenerativeAI/tree/a0c056955a022ee68a4db442afa7de78a5ac3c4e/SFBU%20Customer%20Support%20System
-   cd SFBU Customer Support System
+   git clone https://github.com/bigfishhhhhzoey/GenerativeAI/blob/abadfbf422d21f4f84698d98b1226e185600c98f/SFBU%20Customer%20Support%20System/chatbot.py
    ```
 2. **Set up your `.env` file** with your OpenAI API key:
    ```
