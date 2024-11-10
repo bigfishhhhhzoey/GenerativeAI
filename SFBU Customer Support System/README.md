@@ -6,10 +6,15 @@ This project implements a document-based chatbot using a Retrieval-Augmented Gen
 
 ## Project Workflow
 
-The project is broken down into several steps, as described below:
+The project is broken down into several steps, each demonstrated in dedicated Jupyter Notebooks. You can find all these notebooks in the repository. 
+
+- **Step 1-3**: Loading documents, creating the VectorDB, and performing similarity search are demonstrated in [**3-1_load_and_embed.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-1_load_and_embed.ipynb).
+- **Step 4-6**: Creating the LLM, constructing the QA chain, and setting up the ConversationalRetrievalChain are illustrated in [**3-2_chat_with_history.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-2_chat_with_history.ipynb).
+- **Step 7**: Building the chatbot interface with document retrieval capabilities is covered in detail in [**3-3_chatbot.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-3_chatbot.ipynb). The user interaction and document retrieval features will be demonstrated in the next section.
 
 ### Step 1: Overview of RAG Workflow
 We start by setting up the RAG (Retrieval-Augmented Generation) architecture, which combines retrieval of relevant content from stored documents with a language model to generate responses. This approach ensures more accurate, context-aware responses.
+
 ![RAG](images/rag.jpeg)
 
 ### Step 2: Load Documents and Create VectorDB (Vectorstore)
@@ -17,16 +22,19 @@ We start by setting up the RAG (Retrieval-Augmented Generation) architecture, wh
 - Load various types of documents (PDFs, web pages, YouTube transcripts) using `LangChain` document loaders.
 - Split the documents into manageable chunks using the `RecursiveCharacterTextSplitter`.
 - Store the embedded chunks in a **Chroma vector database** for efficient retrieval during user interactions.
+
 ![Document Loading and Vectorstore](images/vector1.png)
 
 ### Step 3: Similarity Search to Select Relevant Chunks
 - **LangChain Module Used**: `Chroma`
 - Perform a similarity search using `vectordb.as_retriever()` to fetch the most relevant document chunks based on the user query.
+
 ![Similarity Search](images/vector2.png)
 
 ### Step 4: Create a Large Language Model (LLM)
 - **LangChain Module Used**: `ChatOpenAI`
 - Utilize OpenAI's GPT-4 model to generate responses based on the retrieved chunks.
+
 ![LLM](images/llm.png)
 
 ### Step 5: RetrievalQA Chain (Updated)
@@ -38,6 +46,7 @@ This step focuses on using a question-answering (QA) system with a retrieval-aug
 1. Define a prompt template using `ChatPromptTemplate`.
 2. Combine documents using `create_stuff_documents_chain`.
 3. Execute the QA chain using `create_retrieval_chain`.
+
 ![QA](images/qa.png)
 
 ### Step 6: Conversational Retrieval Chain (Updated)
@@ -56,6 +65,7 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 #### Resources
 - [LangChain Memory Migration Guide](https://python.langchain.com/docs/versions/migrating_memory/)
 - [Conversation Buffer Memory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_memory/)
+
 ![chain](images/chain.png)
 
 ### Step 7: Building the Chatbot with a Web-Based UI
