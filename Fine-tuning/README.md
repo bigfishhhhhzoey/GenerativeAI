@@ -1,12 +1,10 @@
-### **README for Drug Classification Fine-Tuning Project**
+## Drug Classification Fine-Tuning Project
 
----
-
-#### **Project Description**
+### **Project Description**
 
 This project demonstrates how to fine-tune an OpenAI GPT-based model to classify drugs into specific medical categories based on their names and usage. The fine-tuned model predicts the malady or condition associated with a given drug and helps automate drug classification tasks.
 
-#### **Objective**
+### **Objective**
 
 To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classification using data from an Excel file. The model outputs a classification token (e.g., `0`, `1`, `2`) corresponding to a medical condition such as Acne, ADHD, or Allergies.
 
