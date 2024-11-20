@@ -92,6 +92,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    convert_to_jsonl(train_df, "train_data.jsonl")
    convert_to_jsonl(val_df, "val_data.jsonl")
    ```
+<img src="images/data.png" alt="Data" width="600">
 
 ### Step 2: Fine-Tuning
 1. Load OpenAI API Configuration:
