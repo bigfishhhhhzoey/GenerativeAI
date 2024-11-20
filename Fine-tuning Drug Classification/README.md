@@ -213,7 +213,8 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    ```
 
 ## Testing Results
-![Prediction](images/pre1.png)
+<img src="images/pre1.png" alt="language" width="600">
+
 ![Prediction](images/pre2.png)
 
 ## Limitations
