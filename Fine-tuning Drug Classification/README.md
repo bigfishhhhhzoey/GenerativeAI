@@ -52,7 +52,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    df.drop(["Description"], axis=1, inplace=True)
    ```
 
-2. Split the data into training and validation datasets (80% training, 20% validation).
+2. Split the data into training and validation datasets (80% training, 20% validation):
    ```python
    # Split the data into training and validation datasets
    train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)
@@ -86,7 +86,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
                f.write(json.dumps(entry) + "\n")
    ```
 
-4. Save the datasets as `train_data.jsonl` and `val_data.jsonl`.
+4. Save the datasets as `train_data.jsonl` and `val_data.jsonl`:
    ```python
    # Save the training and validation datasets to JSONL files
    convert_to_jsonl(train_df, "train_data.jsonl")
