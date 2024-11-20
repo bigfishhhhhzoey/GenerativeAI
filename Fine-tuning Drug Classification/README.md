@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project demonstrates how to fine-tune an OpenAI GPT-based model to classify drugs into specific medical categories based on their names and usage, using data from an Excel file (`Medicine_description.xlsx`). The fine-tuned model predicts the associated medical condition (e.g., Acne, ADHD, Allergies) efficiently, automating drug classification tasks. To balance cost and performance, we used **`gpt-4o-mini-2024-07-18`** as the base model, achieving accurate results while maintaining affordability.
+This project demonstrates how to fine-tune an OpenAI GPT-based model to classify drugs into specific medical categories based on their names and usage, using data from an Excel file (`Medicine_description.xlsx`). The fine-tuned model predicts the associated medical condition (e.g., Acne, ADHD, Allergies) efficiently, automating drug classification tasks. To balance cost and performance, we used `gpt-4o-mini-2024-07-18` as the base model, achieving accurate results while maintaining affordability.
 
 ## Key Features
 1. **Data Preparation**:
