@@ -209,7 +209,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
 
 3. Run the script:
    ```bash
-   python fine_tuning.py
+   python3 fine_tuning.py
    ```
 
 ## Testing Results
