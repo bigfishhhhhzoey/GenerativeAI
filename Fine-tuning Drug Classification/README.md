@@ -162,22 +162,15 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
    ```
 
 ## Testing Results
-- **Input**:
-   ```
-   A CN Gel(Topical) 20gmA CN Soap 75gm
-   ```
-
-- **Output**:
-   ```
-   The drug 'A CN Gel(Topical) 20gmA CN Soap 75gm' is commonly used to treat Acne.
-   ```
+![Prediction](images/pre1.png)
+![Prediction](images/pre2.png)
 
 ## Limitations
 - The model's accuracy depends on the quality and size of the training dataset.
 - Unseen drugs or ambiguous inputs might lead to incorrect classifications or failures.
 
 ## Repository Link
-You can access the full codebase on GitHub: [Fine-tuning Drug Classification](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Fine-tuning).
+You can access the full codebase on GitHub: [Fine-tuning Drug Classification](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Fine-tuning%20Drug%20Classification).
 
 ## Google Slides
-You can access the presentation on Google Slides: [Fine-tuning: Drug Classification](https://docs.google.com/presentation/d/1aNkuirDzg4_AexxwBFSkM9xpe6tSp32pVLcn5gMjke0/edit?usp=sharing).
+You can access the presentation on Google Slides: [Fine-tuning: Drug Classification](https://docs.google.com/presentation/d/1EgYljWw6iEYHg8lR3-3W2FA5FesdJXS8nQbAC4IvqDI/edit?usp=sharing).
