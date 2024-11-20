@@ -28,8 +28,36 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    - **Drug_Name**: The name of the drug.
    - **Reason**: The medical condition associated with the drug.
    - **Description**: Additional information (not used for fine-tuning).
+   ```python
+   import pandas as pd
+   import json
+   from sklearn.model_selection import train_test_split
+   
+   # Load the first n rows of data from the Excel file
+   n = 2000
+   df = pd.read_excel('Medicine_description.xlsx', sheet_name='Sheet1', header=0, nrows=n)
+   
+   # Get unique values in the 'Reason' column and assign numerical indices
+   reasons = df["Reason"].unique()
+   reasons_dict = {reason: i for i, reason in enumerate(reasons)}
+   
+   # Format the 'Drug_Name' column for prompt content
+   df["Drug_Name"] = "Drug: " + df["Drug_Name"] + "\n" + "Malady:"
+   
+   # Replace 'Reason' column values with their numerical mappings
+   df["Reason"] = df["Reason"].apply(lambda x: str(reasons_dict[x]))
+   
+   # Drop the 'Description' column
+   df.drop(["Description"], axis=1, inplace=True)
+   ```
 
-2. Convert the data into a JSONL format with the updated message-based structure:
+2. Split the data into training and validation datasets (80% training, 20% validation).
+   ```python
+   # Split the data into training and validation datasets
+   train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)
+   ```
+    
+3. Convert the data into a JSONL format with the updated message-based structure:
 
    **Example Format**:
    ```json
@@ -41,19 +69,48 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
      ]
    }
    ```
-
-3. Split the data into training and validation datasets (80% training, 20% validation).
+   ```python
+   # Function to convert DataFrame into JSONL format
+   def convert_to_jsonl(df, output_file):
+       output = []
+       system_message = {"role": "system", "content": "You are a drug classification assistant."}
+    
+       for _, row in df.iterrows():
+           user_message = {"role": "user", "content": row["Drug_Name"]}
+           assistant_message = {"role": "assistant", "content": row["Reason"]}
+           output.append({"messages": [system_message, user_message, assistant_message]})
+       
+       with open(output_file, "w") as f:
+           for entry in output:
+               f.write(json.dumps(entry) + "\n")
+   ```
 
 4. Save the datasets as `train_data.jsonl` and `val_data.jsonl`.
+   ```python
+   # Save the training and validation datasets to JSONL files
+   convert_to_jsonl(train_df, "train_data.jsonl")
+   convert_to_jsonl(val_df, "val_data.jsonl")
+   ```
 
 ### Step 2: Fine-Tuning
-1. Upload the training and validation datasets:
+1. **Load OpenAI API Configuration**:
+   ```python
+   import os
+   from dotenv import load_dotenv
+   from openai import OpenAI
+
+   # Load API key from .env file
+   load_dotenv()
+   client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+   ```
+
+2. Upload the training and validation datasets:
    ```python
    train_data = client.files.create(file=open("train_data.jsonl", "rb"), purpose="fine-tune")
    val_data = client.files.create(file=open("val_data.jsonl", "rb"), purpose="fine-tune")
    ```
 
-2. Fine-tune the model:
+3. Fine-tune the model:
    ```python
    fine_tune_job = client.fine_tuning.jobs.create(
        training_file=train_data.id,
@@ -63,17 +120,17 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    )
    ```
 
-3. Monitor the fine-tuning job:
+4. Monitor the fine-tuning job:
    ```python
    updated_job = client.fine_tuning.jobs.retrieve(fine_tune_job.id)
    ```
 
-4. Retrieve the fine-tuned model ID:
+5. Retrieve the fine-tuned model ID:
    ```python
    print(f"Fine-tuned Model ID: {updated_job.fine_tuned_model}")
    ```
 
-5. **Training Details**:
+6. **Training Details**:
    - **Number of Data Entries**: 2000
    - **Training Time**: ~44 minutes
    - **Cost**: $0.58
