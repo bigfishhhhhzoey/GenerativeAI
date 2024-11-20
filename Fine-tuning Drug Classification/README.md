@@ -158,7 +158,7 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
 
 3. Run the script:
    ```bash
-   python drug_classifier.py
+   python fine_tuning.py
    ```
 
 ## Testing Results
