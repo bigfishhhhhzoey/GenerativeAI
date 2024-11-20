@@ -2,12 +2,7 @@
 
 ## Project Description
 
-This project demonstrates how to fine-tune an OpenAI GPT-based model to classify drugs into specific medical categories based on their names and usage. The fine-tuned model predicts the malady or condition associated with a given drug and helps automate drug classification tasks.
-
-## Objective
-
-To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classification using data from an Excel file. The model outputs a classification token (e.g., `0`, `1`, `2`) corresponding to a medical condition such as Acne, ADHD, or Allergies.
-
+This project demonstrates how to fine-tune an OpenAI GPT-based model to classify drugs into specific medical categories based on their names and usage, using data from an Excel file (`Medicine_description.xlsx`). The fine-tuned model predicts the associated medical condition (e.g., Acne, ADHD, Allergies) efficiently, automating drug classification tasks. To balance cost and performance, we used **`gpt-4o-mini-2024-07-18`** as the base model, achieving accurate results while maintaining affordability.
 
 ## Key Features
 1. **Data Preparation**:
@@ -25,7 +20,6 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
 4. **Improved Workflow**:
    - Data preparation, training, and testing are all implemented in Python, ensuring compatibility with the latest OpenAI SDK versions.
    - Functions and processes have been optimized for clarity and usability.
-
 
 ## Workflow
 
@@ -51,8 +45,6 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
 3. Split the data into training and validation datasets (80% training, 20% validation).
 
 4. Save the datasets as `train_data.jsonl` and `val_data.jsonl`.
-
----
 
 ### Step 2: Fine-Tuning
 1. Upload the training and validation datasets:
@@ -85,8 +77,6 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
    - **Number of Data Entries**: 2000
    - **Training Time**: ~44 minutes
    - **Cost**: $0.58
-
----
 
 ### Step 3: Testing the Fine-Tuned Model
 1. Prepare test drug names:
@@ -143,7 +133,6 @@ To fine-tune a GPT model (e.g., `gpt-4o-mini-2024-07-18`) for drug classificatio
 
 5. **Efficiency**:
    - Processed 2000 data entries in ~44 minutes for $0.58, demonstrating cost-effective and efficient fine-tuning.
-
 
 ## How to Run the Project
 1. Install the necessary libraries:
