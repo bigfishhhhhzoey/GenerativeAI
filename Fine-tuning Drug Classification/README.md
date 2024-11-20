@@ -129,14 +129,14 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    updated_job = client.fine_tuning.jobs.retrieve(fine_tune_job.id)
    ```
 
-5. Retrieve the fine-tuned model ID:
+5. Once the fine-tuning job is completed successfully, retrieve the fine-tuned model ID:
    ```python
    print(f"Fine-tuned Model ID: {updated_job.fine_tuned_model}")
    ```
 
 6. **Training Details**:
    - **Number of Data Entries**: 2000
-   - **Training Time**: ~44 minutes
+   - **Training Time**: ~43 minutes
    - **Cost**: $0.58
 
 ### Step 3: Testing the Fine-Tuned Model
@@ -193,7 +193,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    - Cleaned up drug names during testing for better presentation.
 
 5. **Efficiency**:
-   - Processed 2000 data entries in ~44 minutes for $0.58, demonstrating cost-effective and efficient fine-tuning.
+   - Processed 2000 data entries in ~43 minutes for $0.58, demonstrating cost-effective and efficient fine-tuning.
 
 ## How to Run the Project
 1. Install the necessary libraries:
