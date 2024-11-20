@@ -28,6 +28,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    - **Drug_Name**: The name of the drug.
    - **Reason**: The medical condition associated with the drug.
    - **Description**: Additional information (not used for fine-tuning).
+
    ```python
    import pandas as pd
    import json
