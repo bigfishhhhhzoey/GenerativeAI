@@ -133,7 +133,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    ```python
    print(f"Fine-tuned Model ID: {updated_job.fine_tuned_model}")
    ```
-   ![Model](images/model.png)
+   <img src="images/model.png" alt="Model" width="700">
 
 6. **Training Details**:
    - **Number of Data Entries**: 2000
@@ -213,9 +213,8 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    ```
 
 ## Testing Results
-<img src="images/pre1.png" alt="language" width="600">
-
-![Prediction](images/pre2.png)
+<img src="images/pre1.png" alt="Prediction" width="600">
+<img src="images/pre2.png" alt="Prediction" width="700">
 
 ## Limitations
 - The model's accuracy depends on the quality and size of the training dataset.
