@@ -94,7 +94,7 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
    ```
 
 ### Step 2: Fine-Tuning
-1. **Load OpenAI API Configuration**:
+1. Load OpenAI API Configuration:
    ```python
    import os
    from dotenv import load_dotenv
