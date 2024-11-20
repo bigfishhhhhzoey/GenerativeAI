@@ -119,6 +119,9 @@ This project demonstrates how to fine-tune an OpenAI GPT-based model to classify
        validation_file=val_data.id,
        suffix="drug-classifier"
    )
+
+   # Print the fine-tuning job details
+   print(f"Fine-tuning job created with ID: {fine_tune_job.id}")
    ```
 
 4. Monitor the fine-tuning job:
