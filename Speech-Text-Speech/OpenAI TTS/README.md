@@ -146,4 +146,4 @@ OpenAI_TTS/
 Access the full codebase on GitHub: [Speech-Text-Speech/OpenAI TTS](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/OpenAI%20TTS).
 
 ## Google Slides
-You can access the presentation on Google Slides: [Speech-Text-Speech/OpenAI TTS](https://docs.google.com/presentation/d/1_cEa_AHGAoq9JSgTAJcMCuAt1plvvPOo9zzJpCWdClY/edit?usp=sharing).
+You can access the presentation on Google Slides: [Voice Assistance Bot with OpenAI TTS](https://docs.google.com/presentation/d/1_cEa_AHGAoq9JSgTAJcMCuAt1plvvPOo9zzJpCWdClY/edit?usp=sharing).
