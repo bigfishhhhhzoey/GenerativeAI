@@ -67,17 +67,17 @@ OpenAI_TTS/
 
 ## Usage Instructions
 1. **Testing Utilities**:
-   - [`test_audio.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/GTTS/test_audio.py): Test microphone and audio recording functionality.
+   - [`test_audio.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/OpenAI%20TTS/test_audio.py): Test microphone and audio recording functionality.
      ```bash
      python test_audio.py
      ```
-   - [`test_speech_openai.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/GTTS/test_speech_openai.py): Test Whisper API and OpenAI TTS integration.
+   - [`test_speech_openai.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/OpenAI%20TTS/test_speech_openai.py): Test Whisper API and OpenAI TTS integration.
      ```bash
      python test_speech.py
      ```
 
 2. **Threaded Mode**:
-   Run [`sts_openai_threads.py`]() for simultaneous processing:
+   Run [`sts_openai_threads.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/OpenAI%20TTS/sts_openai_threads.py) for simultaneous processing:
    ```bash
    python sts_openai_threads.py
    ```
@@ -88,7 +88,7 @@ OpenAI_TTS/
      ```
 
 2. **Linear Mode**:
-   Run [`sts_openai_linear.py`]() for sequential processing:
+   Run [`sts_openai_linear.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/OpenAI%20TTS/sts_openai_linear.py) for sequential processing:
    ```bash
    python sts_openai_linear.py
    ```
@@ -143,7 +143,7 @@ OpenAI_TTS/
 
 
 ## Repository Link
-Access the full codebase on GitHub: [Speech-Text-Speech/OpenAI TTS](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/OpenAI_TTS).
+Access the full codebase on GitHub: [Speech-Text-Speech/OpenAI TTS](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/OpenAI%20TTS).
 
 ## Google Slides
 You can access the presentation on Google Slides: [Speech-Text-Speech/OpenAI TTS](https://docs.google.com/presentation/d/1_cEa_AHGAoq9JSgTAJcMCuAt1plvvPOo9zzJpCWdClY/edit?usp=sharing).
