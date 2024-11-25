@@ -170,4 +170,4 @@ You can access the full codebase on GitHub: [Speech-Text-Speech/GTTS](https://gi
 
 
 ## Google Slides
-You can access the presentation on Google Slides: [Speech-Text-Speech/GTTS](https://docs.google.com/presentation/d/1eskt9ta_DZ8QCKdt1S9Ht7wlaMVi7rPWJhT1OxlwI9E/edit?usp=sharing).
+You can access the presentation on Google Slides: [Voice Assistance Bot with GTTS](https://docs.google.com/presentation/d/1eskt9ta_DZ8QCKdt1S9Ht7wlaMVi7rPWJhT1OxlwI9E/edit?usp=sharing).
