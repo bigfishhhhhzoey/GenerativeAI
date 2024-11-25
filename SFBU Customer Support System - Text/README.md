@@ -8,9 +8,9 @@ This project implements a document-based chatbot using a Retrieval-Augmented Gen
 
 The project is broken down into several steps, each demonstrated in dedicated Jupyter Notebooks. You can find all these notebooks in the repository. 
 
-- **Step 1-3**: Loading documents, creating the VectorDB, and performing similarity search are demonstrated in [**3-1_load_and_embed.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-1_load_and_embed.ipynb).
-- **Step 4-6**: Creating the LLM, constructing the QA chain, and setting up the ConversationalRetrievalChain are illustrated in [**3-2_chat_with_history.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-2_chat_with_history.ipynb).
-- **Step 7**: Building the chatbot interface with document retrieval capabilities is covered in detail in [**3-3_chatbot.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/3-3_chatbot.ipynb), with the executable Python script in [**chatbot.py**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/chatbot.py). The user interaction and document retrieval features will be demonstrated in the next section.
+- **Step 1-3**: Loading documents, creating the VectorDB, and performing similarity search are demonstrated in [**3-1_load_and_embed.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text/3-1_load_and_embed.ipynb).
+- **Step 4-6**: Creating the LLM, constructing the QA chain, and setting up the ConversationalRetrievalChain are illustrated in [**3-2_chat_with_history.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text/3-2_chat_with_history.ipynb).
+- **Step 7**: Building the chatbot interface with document retrieval capabilities is covered in detail in [**3-3_chatbot.ipynb**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text/3-3_chatbot.ipynb), with the executable Python script in [**chatbot.py**](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text/chatbot.py). The user interaction and document retrieval features will be demonstrated in the next section.
 
 ### Step 1: Overview of RAG Workflow
 We start by setting up the RAG (Retrieval-Augmented Generation) architecture, which combines retrieval of relevant content from stored documents with a language model to generate responses. This approach ensures more accurate, context-aware responses.
@@ -82,7 +82,7 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 
 ## How to Run the Project
 
-1. **Download the [chatbot.py](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System/chatbot.py) app**.
+1. **Download the [chatbot.py](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text/chatbot.py) app**.
    
 2. **Set up your `.env` file** with your OpenAI API key:
    ```
@@ -147,7 +147,7 @@ In this step, we integrate a conversational retrieval chain into our chatbot usi
 - **YoutubeAudioLoader**: Extracting and processing audio transcripts from YouTube
 
 ## Repository Link
-You can access the full codebase on GitHub: [SFBU Customer Support System - Text](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System).
+You can access the full codebase on GitHub: [SFBU Customer Support System - Text](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System%20-%20Text).
 
 ## Google Slides
 You can access the presentation on Google Slides: [SFBU Customer Support System](https://docs.google.com/presentation/d/19YKI3OSkskC-41TqtYMopzYDWjOZRxx0G6OQM1MW-k4/edit?usp=sharing).
