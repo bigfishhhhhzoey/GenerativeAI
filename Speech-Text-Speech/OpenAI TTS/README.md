@@ -138,7 +138,7 @@ OpenAI_TTS/
    - This delay is due to the streaming process and API call latency.
 
 2. **Thread Complexity**:
-   - The threaded mode offers real-time interaction but increases the risk of audio feedback in environments with external speakers.
+   - The threaded mode offers real-time interaction but increases the risk of audio feedback in environments with external speakers. Blocking playback minimizes this issue but does not eliminate it entirely in all environments.
    - The linear mode is simpler but sacrifices real-time conversation flow.
 
 
