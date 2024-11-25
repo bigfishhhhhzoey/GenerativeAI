@@ -5,66 +5,108 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
 
 
 ## **Features**
-1. **AI-Powered Conversations**:
-   - **GPT-4o-mini** is used for generating responses, offering a balance between performance and cost.
-   - Designed for conversational use, so users don’t need to repeat the wake word for every query in an ongoing session.
+1. **State-of-the-Art AI Models**:
+   - **GPT-4o-mini**: Selected for its balance between **cost efficiency** and **performance**. Integration uses the **`get_completion()`** function, designed for the newest OpenAI chat model structure with `role` and `content`.
+   - **Whisper API**: Provides accurate speech-to-text transcription, replacing older Whisper model calls for efficiency and simplicity.
+   - **Google gTTS**: Converts responses into natural-sounding audio.
 
-2. **Accurate Speech-to-Text**:
-   - OpenAI’s **Whisper API** is used for speech transcription, ensuring high accuracy and efficiency.
-   - Transcribed text is cleaned up and seamlessly passed to downstream functions for response generation.
+2. **Conversational Design**:
+   - Wake word (default: "hey computer") to start interactions.
+   - Stop word (default: "stop") to end conversations without restarting the program.
 
-3. **Natural Text-to-Speech**:
-   - Google’s **gTTS** generates audio responses in clear, natural-sounding English, which are played back to the user.
+3. **Playback Blocking**:
+   - Prevents the microphone from picking up audio playback during response output, ensuring clean and accurate interactions.
 
-4. **Flexible Controls**:
-   - **Wake word** (default: "hey computer") to initiate conversations.
-   - **Stop word** (default: "stop") to end conversations without restarting the program.
-   - **Shutdown word** (default: "goodbye") to terminate the program gracefully.
-
-5. **Playback Blocking**:
-   - Ensures that the bot doesn’t pick up its own audio output during playback, even when used with external speakers.
-
-6. **Graceful Shutdown**:
-   - Cleanly shuts down all threads, ensuring no residual processes remain when the program ends.
-   - Works via audio shutdown commands or manual keyboard interrupts (`Ctrl+C`).
-
-7. **Improved Logging**:
-   - **Verbose Mode**:
-     - Provides detailed logs, including timestamps, transcription results, user queries, and bot responses.
-   - **Default Mode**:
-     - Only prints user questions and bot answers for concise output.
-
-8. **Thread Management**:
-   - Threads allow simultaneous recording, transcription, and response generation, enabling the bot to listen while it speaks.
-   - A dedicated `initialize_flags()` function ensures proper reinitialization of threads and shared resources for clean restarts.
-
-9. **Silent Input Handling**:
+4. **Silent Input Handling**:
    - The bot ignores silent periods without logging unnecessary timeout messages.
 
+5. **Modes of Execution**:
+   - **Threaded Mode**:
+     - Supports simultaneous recording, transcription, and response generation, enabling real-time conversation flow.
+   - **Linear Mode**:
+     - Processes tasks sequentially to prevent any potential audio feedback issues, ideal for environments with external speakers.
 
-## **Improvements Made**
-1. **Enhanced AI Integration**:
-   - Transitioned to the **GPT-4o-mini** model, balancing cost efficiency with high performance.
-   - Updated to the latest OpenAI API message structure for compatibility and functionality.
+6. **Dynamic Logging**:
+   - **Verbose mode** provides detailed logs for debugging, including timestamps and intermediate steps.
+   - **Default mode** outputs only user questions and bot responses for a clean user experience.
 
-2. **Whisper API Utilization**:
-   - Replaced direct Whisper model calls with the more efficient and updated **Whisper API**.
-   - Adjusted the transcription output format for seamless integration with downstream processing.
+7. **Graceful Shutdown and Restart**:
+   - Uses `initialize_flags()` to reset shared resources (threads and queues) for clean restarts after abrupt terminations.
 
-3. **Conversational Flow**:
-   - Users can interact naturally without repeating the wake word before every query.
-   - Stop and shutdown words provide intuitive control over the session.
 
-4. **Playback Blocking**:
-   - Ensures the bot doesn’t respond to its own audio output during playback, especially when using external speakers.
+## **Core Functions**
 
-5. **Graceful Restart Mechanism**:
-   - Added `initialize_flags()` to ensure proper thread and resource reinitialization after abrupt terminations.
-   - Prevents issues like starting in non-conversational mode or failing to process inputs after restarts.
+### 1. **`record_audio()`**
+Handles capturing audio from the microphone.
+- **Inputs**:
+  - Records using the `speech_recognition` library.
+  - Adjusts thresholds dynamically for energy levels and pauses.
+- **Outputs**:
+  - Puts raw audio data into the shared `audio_queue`.
+- **Additional Features**:
+  - Ignores silent periods to avoid unnecessary processing.
+  - Provides timeout handling to prevent indefinite blocking.
 
-6. **Dynamic Output Control**:
-   - Verbose mode offers detailed logs for debugging.
-   - Default mode provides clean and user-friendly output by printing only the user question and bot response.
+### 2. **`transcribe_forever()`**
+Processes audio and converts it to text using the Whisper API.
+- **Inputs**:
+  - Reads audio data from the `audio_queue`.
+  - Handles wake words and stop words for conversational control.
+- **Outputs**:
+  - Transcribed text is pushed into the `result_queue` for response generation.
+- **Special Features**:
+  - Supports conversational flow without requiring repeated wake words.
+  - Detects stop word for session control.
+
+### 3. **`reply()`**
+Generates responses using GPT-4o-mini and outputs them via TTS.
+- **Inputs**:
+  - Reads transcribed text from the `result_queue`.
+- **Outputs**:
+  - Sends responses to the user as both text (in logs) and audio (via gTTS).
+- **Additional Features**:
+  - Uses a cache for repeated questions to reduce API calls.
+  - Blocks playback to avoid audio feedback.
+
+### 4. **`get_completion()`**
+A utility function to generate responses using the OpenAI GPT API.
+- Implements the latest OpenAI chat model structure with `role` and `content`.
+- Customizable parameters such as temperature and maximum token limit.
+
+
+## **Directory Structure**
+```plaintext
+GTTS/
+├── sts_gtts_linear.py    # Linear mode implementation for environments prone to feedback.
+├── sts_gtts_threads.py   # Threaded mode implementation for simultaneous processing.
+├── test_audio.py         # Utility to test audio input functionality.
+├── test_speech.py        # Utility to test speech transcription and response generation.
+```
+
+### **Using the Files**
+1. **Testing Utilities**:
+   - `test_audio.py`: Test microphone and audio recording functionality.
+     ```bash
+     python test_audio.py
+     ```
+   - `test_speech.py`: Test Whisper API and GPT integration.
+     ```bash
+     python test_speech.py
+     ```
+
+2. **Threaded Mode**:
+   Run `sts_gtts_threads.py` for simultaneous recording, transcription, and reply:
+   ```bash
+   python sts_gtts_threads.py --verbose
+   ```
+   Use this mode for faster response times when audio feedback is not an issue.
+
+3. **Linear Mode**:
+   Run `sts_gtts_linear.py` for sequential processing:
+   ```bash
+   python sts_gtts_linear.py
+   ```
+   Use this mode in environments with external speakers to prevent playback feedback.
 
 
 ## **Sample Use Cases**
@@ -76,6 +118,7 @@ Below are some common use cases and examples of interaction with the assistant:
 2. **Default Mode**:
    ![sample](images/default.png)
 
+
 ## **Reflection and Drawbacks**
 
 ### **Benefits of Threads**
@@ -83,20 +126,28 @@ Below are some common use cases and examples of interaction with the assistant:
   - The bot can listen while it is speaking, allowing users to interrupt playback with new input.
   - This improves the natural flow of conversation and reduces response latency.
 
-### **Drawbacks of Threads**
+### **Challenges**
 1. **Audio Feedback with External Speakers**:
-   - If external speakers are used, the bot may pick up its own output during playback, especially when a user tries to interrupt with new input.
-   - Playback blocking minimizes this issue but doesn’t fully eliminate it in some environments.
+   - If the microphone is sensitive and external speakers are used, the bot might pick up its own playback when interrupted by new input.
+   - Blocking playback minimizes this issue but does not eliminate it entirely in all environments.
 
-2. **Increased Complexity**:
-   - Threads require careful synchronization and resource management (e.g., queues, shutdown events).
-   - Mismanagement can lead to issues like thread starvation or race conditions.
+2. **Complexity of Thread Management**:
+   - Requires careful synchronization of resources (e.g., queues, shutdown events) to avoid thread-related bugs.
+   - A linear implementation is simpler but sacrifices the ability to listen while speaking.
 
-### **Trade-Off**
-- While a **linear implementation** avoids playback feedback issues, it sacrifices the multi-threading benefits of simultaneous task handling.
-- This threaded version is ideal for scenarios where users may interrupt the bot during playback, provided external microphones or headsets are used to avoid feedback.
+### **Trade-off**
+This project provides both **threaded** and **linear** modes to address different use cases:
+- Use **threaded mode** for conversational speed and real-time interactions.
+- Use **linear mode** for environments where audio feedback is a concern.
 
----
 
 ## **Conclusion**
-This voice assistant program combines state-of-the-art AI models with practical design considerations to deliver a robust, natural, and intuitive user experience. It handles real-time conversations gracefully, manages threads efficiently, and offers flexible control for users. The inclusion of both threaded and linear designs ensures adaptability for various environments and use cases.
+This voice assistant combines cutting-edge AI models (GPT-4o-mini and Whisper API) with robust engineering to deliver a conversational, natural, and efficient experience. With flexibility for different environments and use cases, it is a versatile tool for exploring voice-based AI interactions.
+
+
+## Repository Link
+You can access the full codebase on GitHub: [Speech-Text-Speech/GTTS](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/GTTS).
+
+
+## Google Slides
+You can access the presentation on Google Slides: [Speech-Text-Speech/GTTS](https://docs.google.com/presentation/d/1eskt9ta_DZ8QCKdt1S9Ht7wlaMVi7rPWJhT1OxlwI9E/edit?usp=sharing).
