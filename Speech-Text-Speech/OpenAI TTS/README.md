@@ -1,7 +1,7 @@
 # Voice Assistant Project with GPT-4, Whisper API, and OpenAI TTS
 
 ## Overview
-This project is an advanced version of the [GTTS-based voice assistant](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/GTTS) with several key improvements. It integrates OpenAI’s **GPT-4o-mini** for text generation, **Whisper API** for speech-to-text transcription, and OpenAI's **TTS API** for text-to-speech. The assistant takes audio input, processes it using AI models, generates responses, and outputs responses via natural-sounding audio playback. 
+This project is an advanced version of the [GTTS-based voice assistant](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Speech-Text-Speech/GTTS) with several key improvements. It integrates OpenAI’s **GPT-4o-mini** for text generation, [**Whisper API**](https://platform.openai.com/docs/guides/speech-to-text) for speech-to-text transcription, and [OpenAI's **TTS API**](https://platform.openai.com/docs/guides/text-to-speech) for text-to-speech. The assistant takes audio input, processes it using AI models, generates responses, and outputs responses via natural-sounding audio playback. 
 
 The program supports both **threaded** and **linear** modes to address different use cases, enhancing conversational flow and reducing playback feedback issues.
 
