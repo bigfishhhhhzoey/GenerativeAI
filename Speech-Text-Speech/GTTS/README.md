@@ -37,41 +37,41 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
 ## Core Functions
 
 1. **`record_audio()`**
-- Handles capturing audio from the microphone.
-- **Inputs**:
-  - Records using the `speech_recognition` library.
-  - Adjusts thresholds dynamically for energy levels and pauses.
-- **Outputs**:
-  - Puts raw audio data into the shared `audio_queue`.
-- **Additional Features**:
-  - Ignores silent periods to avoid unnecessary processing.
-  - Provides timeout handling to prevent indefinite blocking.
+   Handles capturing audio from the microphone.
+   - **Inputs**:
+     - Records using the `speech_recognition` library.
+     - Adjusts thresholds dynamically for energy levels and pauses.
+   - **Outputs**:
+     - Puts raw audio data into the shared `audio_queue`.
+   - **Additional Features**:
+     - Ignores silent periods to avoid unnecessary processing.
+     - Provides timeout handling to prevent indefinite blocking.
 
 2. **`transcribe_forever()`**
-- Processes audio and converts it to text using the Whisper API.
-- **Inputs**:
-  - Reads audio data from the `audio_queue`.
-  - Handles wake words and stop words for conversational control.
-- **Outputs**:
-  - Transcribed text is pushed into the `result_queue` for response generation.
-- **Special Features**:
-  - Supports conversational flow without requiring repeated wake words.
-  - Detects stop word for session control.
+   Processes audio and converts it to text using the Whisper API.
+   - **Inputs**:
+     - Reads audio data from the `audio_queue`.
+     - Handles wake words and stop words for conversational control.
+   - **Outputs**:
+     - Transcribed text is pushed into the `result_queue` for response generation.
+   - **Special Features**:
+     - Supports conversational flow without requiring repeated wake words.
+     - Detects stop word for session control.
 
 3. **`reply()`**
-Generates responses using GPT-4o-mini and outputs them via TTS.
-- **Inputs**:
-  - Reads transcribed text from the `result_queue`.
-- **Outputs**:
-  - Sends responses to the user as both text (in logs) and audio (via gTTS).
-- **Additional Features**:
-  - Uses a cache for repeated questions to reduce API calls.
-  - Blocks playback to avoid audio feedback.
+   Generates responses using GPT-4o-mini and outputs them via TTS.
+   - **Inputs**:
+     - Reads transcribed text from the `result_queue`.
+   - **Outputs**:
+     - Sends responses to the user as both text (in logs) and audio (via gTTS).
+   - **Additional Features**:
+     - Uses a cache for repeated questions to reduce API calls.
+     - Blocks playback to avoid audio feedback.
 
 4. **`get_completion()`**
-A utility function to generate responses using the OpenAI GPT API.
-- Implements the latest OpenAI chat model structure with `role` and `content`.
-- Customizable parameters such as temperature and maximum token limit.
+   A utility function to generate responses using the OpenAI GPT API.
+   - Implements the latest OpenAI chat model structure with `role` and `content`.
+   - Customizable parameters such as temperature and maximum token limit.
 
 
 ## Directory Structure
@@ -115,8 +115,8 @@ Below are some common use cases and examples of interaction with the assistant:
 ### Threaded Mode
 1. **Verbose Mode**:
    All detailed logs are displayed, including timestamps, intermediate steps, transcription results, and playback processes. The test includes the following:
-- **Use wake word**: The user starts the conversation by saying "Hey computer."
-- **Ask questions**: Questions like "What's the color of the sky?" and "What's the color of grass?" are asked, with detailed responses from the bot.
+   - **Use wake word**: The user starts the conversation by saying "Hey computer."
+   - **Ask questions**: Questions like "What's the color of the sky?" and "What's the color of grass?" are asked, with detailed responses from the bot.
    - **Maintain conversation**: The program continues listening and responding without needing the wake word again.
    - **Use stop word**: The user says "Thank you, stop." to temporarily end the conversation.
    - **Ignore input when not in conversation mode**: The bot does not process questions unless the conversation is reactivated.
