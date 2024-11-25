@@ -93,20 +93,20 @@ GTTS/
      ```bash
      python test_audio.py
      ```
-   - `test_speech.py`: Test Whisper API and GPT integration.
+   - [`test_speech.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/GTTS/test_speech.py): Test Whisper API and GPT integration.
      ```bash
      python test_speech.py
      ```
 
 2. **Threaded Mode**:
-   Run `sts_gtts_threads.py` for simultaneous recording, transcription, and reply:
+   Run [`sts_gtts_threads.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/GTTS/sts_gtts_threads.py) for simultaneous recording, transcription, and reply:
    ```bash
    python sts_gtts_threads.py --verbose
    ```
    Use this mode for faster response times when audio feedback is not an issue.
 
 3. **Linear Mode**:
-   Run `sts_gtts_linear.py` for sequential processing:
+   Run [`sts_gtts_linear.py`](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/Speech-Text-Speech/GTTS/sts_gtts_linear.py) for sequential processing:
    ```bash
    python sts_gtts_linear.py
    ```
