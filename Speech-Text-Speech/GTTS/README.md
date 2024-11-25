@@ -129,6 +129,7 @@ Below are some common use cases and examples of interaction with the assistant:
    ![sample](images/verbose.png)
       
 2. **Default Mode**: Only the user’s question and the bot’s response are printed for a cleaner display. This mode is more user-friendly and focused on providing a streamlined experience for real-world use cases.
+
    ![sample](images/default.png)
 
 ### Linear Mode
