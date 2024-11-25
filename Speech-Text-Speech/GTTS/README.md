@@ -133,9 +133,12 @@ Below are some common use cases and examples of interaction with the assistant:
    ![sample](images/default.png)
 
 ### Linear Mode
-   ![sample](images/linear.png)
+1. **Verbose Mode**
+   ![sample](images/linear1.png)
 
-
+2. **Default Mode**
+   ![sample](images/linear2.png)
+   
 ## Reflection and Drawbacks
 
 ### Benefits of Threads
