@@ -37,6 +37,7 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
 ## Core Functions
 
 1. **`record_audio()`**
+
    Handles capturing audio from the microphone.
    - **Inputs**:
      - Records using the `speech_recognition` library.
@@ -47,7 +48,8 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
      - Ignores silent periods to avoid unnecessary processing.
      - Provides timeout handling to prevent indefinite blocking.
 
-2. **`transcribe_forever()`**
+3. **`transcribe_forever()`**
+
    Processes audio and converts it to text using the Whisper API.
    - **Inputs**:
      - Reads audio data from the `audio_queue`.
@@ -58,7 +60,8 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
      - Supports conversational flow without requiring repeated wake words.
      - Detects stop word for session control.
 
-3. **`reply()`**
+4. **`reply()`**
+
    Generates responses using GPT-4o-mini and outputs them via TTS.
    - **Inputs**:
      - Reads transcribed text from the `result_queue`.
@@ -68,7 +71,8 @@ This project is a voice assistant program that integrates OpenAI’s **GPT-4o-mi
      - Uses a cache for repeated questions to reduce API calls.
      - Blocks playback to avoid audio feedback.
 
-4. **`get_completion()`**
+5. **`get_completion()`**
+
    A utility function to generate responses using the OpenAI GPT API.
    - Implements the latest OpenAI chat model structure with `role` and `content`.
    - Customizable parameters such as temperature and maximum token limit.
@@ -114,7 +118,8 @@ Below are some common use cases and examples of interaction with the assistant:
 
 ### Threaded Mode
 1. **Verbose Mode**:
-   All detailed logs are displayed, including timestamps, intermediate steps, transcription results, and playback processes. The test includes the following:
+
+All detailed logs are displayed, including timestamps, intermediate steps, transcription results, and playback processes. The test includes the following:
    - **Use wake word**: The user starts the conversation by saying "Hey computer."
    - **Ask questions**: Questions like "What's the color of the sky?" and "What's the color of grass?" are asked, with detailed responses from the bot.
    - **Maintain conversation**: The program continues listening and responding without needing the wake word again.
@@ -124,7 +129,7 @@ Below are some common use cases and examples of interaction with the assistant:
    - **End conversation and exit**: The user says "Thank you, stop." to end the conversation and exits the program with `Ctrl+C`.  
    ![sample](images/verbose.png)
       
-2. **Default Mode**:
+3. **Default Mode**:
    Only the user’s question and the bot’s response are printed for a cleaner display. This mode is more user-friendly and focused on providing a streamlined experience for real-world use cases.
    ![sample](images/default.png)
 
@@ -135,9 +140,9 @@ Below are some common use cases and examples of interaction with the assistant:
 ## Reflection and Drawbacks
 
 ### Benefits of Threads
-- Threads allow the assistant to perform **recording**, **transcription**, and **response generation** simultaneously:
-  - The bot can listen while it is speaking, allowing users to interrupt playback with new input.
-  - This improves the natural flow of conversation and reduces response latency.
+Threads allow the assistant to perform **recording**, **transcription**, and **response generation** simultaneously:
+- The bot can listen while it is speaking, allowing users to interrupt playback with new input.
+- This improves the natural flow of conversation and reduces response latency.
 
 ### Challenges
 1. **Audio Feedback with External Speakers**:
