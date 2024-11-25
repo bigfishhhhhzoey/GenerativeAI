@@ -7,7 +7,7 @@ This directory contains two projects that demonstrate advanced **speech-to-text-
 1. **GTTS Project**:
    - Integrates **GPT-4o-mini**, **Whisper API**, and **Google TTS (gTTS)** for efficient and cost-effective voice interactions.
    - Offers **threaded mode** for simultaneous recording, transcription, and response generation, as well as a **linear mode** for sequential processing.
-   - **[Explore the GTTS Project](./GTTS/)**
+   - **[Explore the GTTS Project](./GTTS)**
 
 2. **OpenAI TTS Project**:
    - Builds on the GTTS project, replacing gTTS with **OpenAI TTS** for higher-quality audio output.
@@ -21,9 +21,5 @@ This directory contains two projects that demonstrate advanced **speech-to-text-
 
 ## Getting Started
 Refer to the individual project directories for setup instructions and usage examples:
-- **[GTTS Project](./GTTS/README.md)**
-- **[OpenAI TTS Project](./OpenAI%20TTS/README.md)**
-
----
-
-Feel free to explore and test the projects for different use cases, from personal assistants to interactive AI applications.
+- **[GTTS Project](./GTTS)**
+- **[OpenAI TTS Project](./OpenAI%20TTS)**
