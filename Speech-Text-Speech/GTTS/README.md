@@ -117,20 +117,18 @@ GTTS/
 Below are some common use cases and examples of interaction with the assistant:
 
 ### Threaded Mode
-1. **Verbose Mode**:
-
-All detailed logs are displayed, including timestamps, intermediate steps, transcription results, and playback processes. The test includes the following:
+1. **Verbose Mode**: All detailed logs are displayed, including timestamps, intermediate steps, transcription results, and playback processes. 
    - **Use wake word**: The user starts the conversation by saying "Hey computer."
    - **Ask questions**: Questions like "What's the color of the sky?" and "What's the color of grass?" are asked, with detailed responses from the bot.
    - **Maintain conversation**: The program continues listening and responding without needing the wake word again.
    - **Use stop word**: The user says "Thank you, stop." to temporarily end the conversation.
    - **Ignore input when not in conversation mode**: The bot does not process questions unless the conversation is reactivated.
    - **Start conversation again**: The user says the wake word and asks another question, "What's the newest iPhone?" to restart the session.
-   - **End conversation and exit**: The user says "Thank you, stop." to end the conversation and exits the program with `Ctrl+C`.  
+   - **End conversation and exit**: The user says "Thank you, stop." to end the conversation and exits the program with `Ctrl+C`.
+   
    ![sample](images/verbose.png)
       
-3. **Default Mode**:
-   Only the user’s question and the bot’s response are printed for a cleaner display. This mode is more user-friendly and focused on providing a streamlined experience for real-world use cases.
+2. **Default Mode**: Only the user’s question and the bot’s response are printed for a cleaner display. This mode is more user-friendly and focused on providing a streamlined experience for real-world use cases.
    ![sample](images/default.png)
 
 ### Linear Mode
