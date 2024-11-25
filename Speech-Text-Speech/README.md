@@ -12,7 +12,7 @@ This directory contains two projects that demonstrate advanced **speech-to-text-
 2. **OpenAI TTS Project**:
    - Builds on the GTTS project, replacing gTTS with **OpenAI TTS** for higher-quality audio output.
    - Supports the same threaded and linear modes, with additional improvements for resource management and audio playback.
-   - **[Explore the OpenAI TTS Project](./OpenAI%20%TTS)**
+   - **[Explore the OpenAI TTS Project](./OpenAI%20TTS)**
 
 ## Key Features
 - Wake word and stop word support for natural conversation flow.
@@ -22,7 +22,7 @@ This directory contains two projects that demonstrate advanced **speech-to-text-
 ## Getting Started
 Refer to the individual project directories for setup instructions and usage examples:
 - **[GTTS Project](./GTTS/README.md)**
-- **[OpenAI TTS Project](./OpenAI%20%TTS/README.md)**
+- **[OpenAI TTS Project](./OpenAI%20TTS/README.md)**
 
 ---
 
