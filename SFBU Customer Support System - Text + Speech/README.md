@@ -67,15 +67,19 @@ This project builds upon the [document-based chatbot with RAG and conversational
 ## Example Use Cases
 
 1. **Voice Interaction**:
+   - Click **Use Speech Input/Output**.
    - Start by saying "Hey computer" to activate voice recognition.
    - Ask about the university's scholarship options and receive an audible answer.
+   ![voice](images/voice.png)
 
 2. **Follow-Up Questions**:
-   - Ask a follow-up without repeating context (e.g., "Tell me more about graduate scholarships"). The chatbot maintains context.
+   - Ask a question first (e.g., "Tell me about the scholarship options.")
+   - Ask a follow-up without repeating context (e.g., "Tell me more about president's scholarships"). The chatbot maintains context.
+   ![voice](images/qa.png)
 
 3. **Document-Based Q&A**:
    - Upload a document and ask questions about its content.
-   - For example, upload a PDF about university courses and inquire about specific course details.
+   ![voice](images/upload.png)
 
 ## Tech Stack
 
@@ -97,8 +101,7 @@ This project extends the [text-based chatbot](https://github.com/bigfishhhhhzoey
 3. **Real-Time User Experience**: Responses are displayed before being played, offering immediate feedback.
 
 ## Repository Link
-You can access the full codebase on GitHub: [SFBU Customer Support System with Speech](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/SFBU%20Customer%20Support%20System%20-Text%20+%20Speech).
+You can access the full codebase on GitHub: [SFBU Customer Support System with Speech](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text%20+%20Speech).
 
 ## Google Slides
-You can access the presentation on Google Slides: [SFBU Customer Support System with Speech Integration](https://docs.google.com/presentation/d/1_cEa_AHGAoq9JSgTAJcMCuAt1plvvPOo9zzJpCWdClY/edit?usp=sharing).
-
+You can access the presentation on Google Slides: [SFBU Customer Support System with Speech Integration](https://docs.google.com/presentation/d/1dTaq-e8OEAV-MJ12oIEuBzJzCIu0PIsCwzuWiNv5dDw/edit?usp=sharing).
