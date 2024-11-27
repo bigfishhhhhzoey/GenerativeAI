@@ -87,7 +87,7 @@ This project builds upon the [document-based chatbot with RAG and conversational
    
    ![Follow-up Question](images/qa1.png)
    
-   - Ask a follow-up without repeating context (e.g., "Tell me more about one of them."). The chatbot maintains context.
+   - Ask a follow-up question without repeating context (e.g., "Tell me more about one of them."). The chatbot maintains context.
    
    ![Follow-up Question](images/qa2.png)
 
