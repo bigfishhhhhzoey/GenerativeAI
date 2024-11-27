@@ -101,9 +101,12 @@ This project builds upon the [document-based chatbot with RAG and conversational
    ![Chat History](images/history2.png) 
    
 7. **Document-Based Q&A**:
-   - Upload a document and ask questions about its content.
+   - Upload a document (ee.g., the SFBU school catalog).
      
    ![Upload](images/upload1.png)
+
+   -  Ask questions about the document's content.
+     
    ![Upload](images/upload2.png)
 
 ## Tech Stack
