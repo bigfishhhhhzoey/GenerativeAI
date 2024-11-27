@@ -69,7 +69,7 @@ This project builds upon the [document-based chatbot with RAG and conversational
 1. **Voice Interaction**:
    - Click **Use Speech Input/Output**.
    - Start by saying "Hey computer" to activate voice recognition.
-   - Use stop word to stop the conversation, the system will keep listening but will ignore input when not in conversation mode.
+   - Use stop word to stop the conversation, the system keeps listening and transcribing but ignores input when not in conversation mode.
    
    ![Speech](images/speech1.png)
 
