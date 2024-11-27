@@ -69,27 +69,37 @@ This project builds upon the [document-based chatbot with RAG and conversational
 1. **Voice Interaction**:
    - Click **Use Speech Input/Output**.
    - Start by saying "Hey computer" to activate voice recognition.
-   - Ask about the university's scholarship options and receive an audible answer.
+   - Use stop word to stop the conversation, the system will keep listening but will ignore input when not in conversation mode.
+   
    ![Speech](images/speech1.png)
+
+   - Terminal display.
    ![Speech](images/speech2.png)
 
-2. **Start New Conversation**:
+3. **Start New Conversation**:
    - Click **Start New Conversation** to reset the current discussion without clearing the overall chat history.
+   
    ![New Conversation](images/clear_convo.png)
 
-3. **Follow-Up Questions**:
-   - Ask a question first (e.g., "Tell me about the scholarship options.")
+4. **Follow-Up Questions**:
+   - Ask a question first (e.g., "What are the scholarship options.")
+   
    ![Follow-up Question](images/qa1.png)
-   - Ask a follow-up without repeating context (e.g., "Tell me more about president's scholarships"). The chatbot maintains context.
+   
+   - Ask a follow-up without repeating context (e.g., "Tell me more about one of them."). The chatbot maintains context.
+   
    ![Follow-up Question](images/qa2.png)
 
-4. **Chat History Management**:
+6. **Chat History Management**:
    - All past conversations are displayed.
+     
    ![Chat History](images/history1.png)
+
    - Clear all history.
+     
    ![Chat History](images/history2.png) 
    
-5. **Document-Based Q&A**:
+7. **Document-Based Q&A**:
    - Upload a document and ask questions about its content.
    ![Upload](images/upload.png)
 
