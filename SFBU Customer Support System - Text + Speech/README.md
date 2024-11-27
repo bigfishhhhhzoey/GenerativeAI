@@ -74,6 +74,7 @@ This project builds upon the [document-based chatbot with RAG and conversational
    ![Speech](images/speech1.png)
 
    - Terminal display.
+   
    ![Speech](images/speech2.png)
 
 3. **Start New Conversation**:
@@ -82,7 +83,7 @@ This project builds upon the [document-based chatbot with RAG and conversational
    ![New Conversation](images/clear_convo.png)
 
 4. **Follow-Up Questions**:
-   - Ask a question first (e.g., "What are the scholarship options.")
+   - Ask a question first (e.g., "What are the scholarship options?")
    
    ![Follow-up Question](images/qa1.png)
    
@@ -101,7 +102,9 @@ This project builds upon the [document-based chatbot with RAG and conversational
    
 7. **Document-Based Q&A**:
    - Upload a document and ask questions about its content.
-   ![Upload](images/upload.png)
+     
+   ![Upload](images/upload1.png)
+   ![Upload](images/upload2.png)
 
 ## Tech Stack
 
