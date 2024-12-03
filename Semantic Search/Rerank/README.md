@@ -13,21 +13,6 @@ The project provides three main components for retrieval and ranking:
 
 The project also includes a function to print the search results in a readable format with colorful formatting.
 
-# Semantic Search with Keyword, Dense Retrieval, and Rerank
-
-This project demonstrates how to implement semantic search by combining keyword-based search, dense retrieval techniques, and reranking, utilizing BM25, transformer-based embeddings, and relevance scoring to retrieve and rank relevant documents. The core of the project focuses on leveraging Weaviate's client API for building a semantic search engine that ranks articles effectively based on user queries.
-
-## Project Overview
-The project provides three main components for retrieval and ranking:
-
-1. **Keyword Search**: Uses BM25 to perform a keyword-based search that matches the terms from the query against articles in the dataset. This approach provides a good starting point but may not always yield the most relevant results.
-
-2. **Dense Retrieval**: Uses dense embeddings to identify articles similar to the query conceptually, even if the exact terms are not present. This method helps find documents that are semantically related to the query, but the results may still include irrelevant or noisy responses.
-
-3. **Rerank**: After retrieving initial results using keyword search or dense retrieval, Rerank is used to sort the search results based on their relevance to the query. This step significantly improves the quality of the results by assigning a relevance score to each retrieved document and sorting them from most to least relevant. Rerank ensures that the final results presented are accurate and directly answer the user's query.
-
-The project also includes a function to print the search results in a readable format with colorful formatting.
-
 ## Prerequisites
 - Cohere and Weaviate API keys are required for this project. These keys allow access to the Cohere and Weaviate services needed for semantic search.
 - The project retrieves data from a public Weaviate demo database: [https://cohere-demo.weaviate.network/](https://cohere-demo.weaviate.network/), which contains Wikipedia entries.
