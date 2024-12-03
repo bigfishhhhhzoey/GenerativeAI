@@ -40,51 +40,95 @@ This function reranks the retrieved results based on their relevance to the quer
 ### 4. `print_result(result)`
 This function prints the retrieved articles with colorful formatting for better readability. Each property of the search result is displayed clearly.
 
+### Set Up Environment
+To begin using this project, you need to set up the required API keys for Cohere and Weaviate. These keys are used to access the services needed for semantic search.
+
+1. **Get Cohere API Key**: Sign up at [Cohere](https://cohere.ai/) and obtain your API key.
+2. **Get Weaviate API Key**: You can access the public Weaviate demo instance without a key or set up your own Weaviate instance and use the corresponding API key.
+
+Store your API keys as environment variables or in a configuration file:
+
+- Set them as environment variables (example for Linux/macOS):
+  ```bash
+  export COHERE_API_KEY='your_cohere_api_key_here'
+  export WEAVIATE_API_KEY='your_weaviate_api_key_here'
+  ```
+
+- Alternatively, create a `.env` file:
+  ```
+  COHERE_API_KEY=your_cohere_api_key_here
+  WEAVIATE_API_KEY=your_weaviate_api_key_here
+  ```
+  Use a library like `python-dotenv` to load these keys into your project.
+
+
 ## Example Workflow
 To use this project for semantic search:
-1. **Initialize the Weaviate client**:
+1. **Set up Environment**:
+   - Get Cohere API Key: Sign up at [Cohere](https://cohere.ai/) and obtain your API key.
+   - Get Weaviate API Key: You can access the public Weaviate demo instance without a key or set up your own Weaviate instance and use the corresponding API key.
+
+   - Store your API keys as environment variables or in a configuration file:
+
+
+
+- Alternatively, create a `.env` file:
+  ```
+  COHERE_API_KEY=your_cohere_api_key_here
+  WEAVIATE_API_KEY=your_weaviate_api_key_here
+  ```
+   
+3. **Initialize the Weaviate client**:
    ```python
    import weaviate
    client = weaviate.Client()
    ```
 
-2. **Perform keyword-based search**:
+4. **Perform keyword-based or dense retrieval search**:
    ```python
-   query = "artificial intelligence"
-   results = keyword_search(query, client)
-   print_result(results)
+   query = "What is the capital of Canada?"
+   # Using keyword search as example
+   results = keyword_search(query_1,
+                         client,
+                         properties=["text", "title", "url", "views", "lang", "_additional {distance}"],
+                         num_results=3
+                        )
+
+   for i, result in enumerate(results):
+       print(f"i:{i}")
+       print(result.get('title'))
+       print(result.get('text'))
    ```
 
-3. **Perform dense retrieval search**:
+5. **Rerank the results**:
    ```python
-   results = dense_retrieval(query, client)
-   print_result(results)
-   ```
+   texts = [result.get('text') for result in results]
+   reranked_text = rerank_responses(query_1, texts)
 
-4. **Rerank the results**:
-   ```python
-   reranked_results = rerank(query, results)
-   print_result(reranked_results)
+   for i, rerank_result in enumerate(reranked_text):
+       print(f"i:{i}")
+       print(f"{rerank_result}")
+       print()
    ```
 
 ## How Rerank Improves Search Results
 The Rerank component plays a crucial role in enhancing the accuracy of search results. While keyword search and dense retrieval provide a good set of potential matches, these methods may still return irrelevant or incorrect results. Rerank addresses this limitation by assigning a relevance score to each retrieved document and sorting them accordingly.
 
 ### Key Word Search Results:
-- **Before Rerank**
+- **Before Rerank:**
 Keyword search often retrieves documents that contain the exact terms from the query but may not be contextually relevant.
 ![Key Word Search](images/key1.png)
 
-- **After Rerank**
+- **After Rerank:**
 Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. 
 ![Key Word Search](images/key1.png)
 
 ### Dense Retrieval Results:
-- **Before Rerank**
+- **Before Rerank:**
 Dense retrieval retrieves semantically similar responses, but not all of them are relevant to the query. In this case, some responses are incorrect or off-topic.
 ![Dense Retrieval](images/dense1.png)
 
-- **After Rerank**
+- **After Rerank:**
 Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. 
 ![Dense Retrieval](images/dense2.png)
 
