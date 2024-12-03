@@ -13,16 +13,27 @@ The project provides three main components for retrieval and ranking:
 
 The project also includes a function to print the search results in a readable format with colorful formatting.
 
+# Semantic Search with Keyword, Dense Retrieval, and Rerank
+
+This project demonstrates how to implement semantic search by combining keyword-based search, dense retrieval techniques, and reranking, utilizing BM25, transformer-based embeddings, and relevance scoring to retrieve and rank relevant documents. The core of the project focuses on leveraging Weaviate's client API for building a semantic search engine that ranks articles effectively based on user queries.
+
+## Project Overview
+The project provides three main components for retrieval and ranking:
+
+1. **Keyword Search**: Uses BM25 to perform a keyword-based search that matches the terms from the query against articles in the dataset. This approach provides a good starting point but may not always yield the most relevant results.
+
+2. **Dense Retrieval**: Uses dense embeddings to identify articles similar to the query conceptually, even if the exact terms are not present. This method helps find documents that are semantically related to the query, but the results may still include irrelevant or noisy responses.
+
+3. **Rerank**: After retrieving initial results using keyword search or dense retrieval, Rerank is used to sort the search results based on their relevance to the query. This step significantly improves the quality of the results by assigning a relevance score to each retrieved document and sorting them from most to least relevant. Rerank ensures that the final results presented are accurate and directly answer the user's query.
+
+The project also includes a function to print the search results in a readable format with colorful formatting.
+
 ## Prerequisites
+- Cohere and Weaviate API keys are required for this project. These keys allow access to the Cohere and Weaviate services needed for semantic search.
+- The project retrieves data from a public Weaviate demo database: [https://cohere-demo.weaviate.network/](https://cohere-demo.weaviate.network/), which contains Wikipedia entries.
 - Python 3.6+
 - Weaviate client library (`weaviate-client`) to connect to the semantic search backend
 - Weaviate instance to run the semantic search
-
-## Installation
-To get started, ensure you have Python installed, and then install the necessary dependencies:
-```bash
-pip install weaviate-client
-```
 
 ## Usage
 The following functions are included in the code:
@@ -38,7 +49,7 @@ This function performs keyword-based search using BM25. It takes the following p
 ### 2. `dense_retrieval(query, client, results_lang='en', properties, num_results)`
 This function performs a dense retrieval by utilizing transformer-based embeddings to capture the semantic meaning of the query. Parameters are similar to `keyword_search`.
 
-### 3. `rerank(query, results)`
+### 3. `rerank_responses(query, responses, num_responses)`
 This function reranks the retrieved results based on their relevance to the query. It assigns a relevance score to each query-response pair and sorts the results accordingly, ensuring that the most relevant answers are ranked higher.
 
 ### 4. `print_result(result)`
@@ -49,7 +60,7 @@ To use this project for semantic search:
 1. **Initialize the Weaviate client**:
    ```python
    import weaviate
-   client = weaviate.Client("http://localhost:8080")
+   client = weaviate.Client()
    ```
 
 2. **Perform keyword-based search**:
@@ -74,31 +85,29 @@ To use this project for semantic search:
 ## How Rerank Improves Search Results
 The Rerank component plays a crucial role in enhancing the accuracy of search results. While keyword search and dense retrieval provide a good set of potential matches, these methods may still return irrelevant or incorrect results. Rerank addresses this limitation by assigning a relevance score to each retrieved document and sorting them accordingly.
 
-For example, consider the following scenario for the query "What is the capital of Canada?":
+### Key Word Search Results:
+- **Before Rerank**
+Keyword search often retrieves documents that contain the exact terms from the query but may not be contextually relevant.
+![Key Word Search](images/key1.png)
 
-### Before Rerank (Dense Retrieval Results):
-1. "The capital of Canada is Ottawa." (Correct)
-2. "Toronto is in Canada." (Incorrect for this question)
-3. "The capital of Ontario is Toronto." (Irrelevant)
+- **After Rerank**
+Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. 
+![Key Word Search](images/key1.png)
 
+### Dense Retrieval Results:
+- **Before Rerank**
 Dense retrieval retrieves semantically similar responses, but not all of them are relevant to the query. In this case, some responses are incorrect or off-topic.
+![Dense Retrieval](images/dense1.png)
 
-### After Rerank:
-1. "The capital of Canada is Ottawa." (Relevance Score: 0.98)
-2. "The different capitals Canada has had in its history." (Relevance Score: 0.97)
-3. "Ottawa, the current capital of Canada." (Relevance Score: 0.95)
-
-Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. This greatly enhances the user experience by providing accurate answers without the noise that dense retrieval or keyword search might introduce.
-
-![Before Rerank](screenshots/before_rerank.png)
-
-![After Rerank](screenshots/after_rerank.png)
+- **After Rerank**
+Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. 
+![Dense Retrieval](images/dense2.png)
 
 ## Acknowledgements
 This project is inspired by the lesson from the [DeepLearning.AI Semantic Search course](https://learn.deeplearning.ai/courses/large-language-models-semantic-search/lesson/5/rerank).
 
 ## Repository Link
-You can access the full codebase on GitHub: [SFBU Customer Support System with Speech](https://github.com/bigfishhhhhzoey/GenerativeAI/blob/main/SFBU%20Customer%20Support%20System%20-%20Text%20+%20Speech).
+You can access the full codebase on GitHub: [Semantic Search/Rerank](https://github.com/bigfishhhhhzoey/GenerativeAI/tree/main/Semantic%20Search/Rerank).
 
 ## Google Slides
-You can access the presentation on Google Slides: [SFBU Customer Support System with Speech Integration](https://docs.google.com/presentation/d/1dTaq-e8OEAV-MJ12oIEuBzJzCIu0PIsCwzuWiNv5dDw/edit?usp=sharing).
+You can access the presentation on Google Slides: [Semantic Search with Rerank](https://docs.google.com/presentation/d/1egA18GALoF8M55py6dfLz_GY61fkFyQw-_lgUVyptbY/edit?usp=sharing).
