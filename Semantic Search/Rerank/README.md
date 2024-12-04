@@ -40,51 +40,24 @@ This function reranks the retrieved results based on their relevance to the quer
 ### 4. `print_result(result)`
 This function prints the retrieved articles with colorful formatting for better readability. Each property of the search result is displayed clearly.
 
-### Set Up Environment
-To begin using this project, you need to set up the required API keys for Cohere and Weaviate. These keys are used to access the services needed for semantic search.
-
-1. **Get Cohere API Key**: Sign up at [Cohere](https://cohere.ai/) and obtain your API key.
-2. **Get Weaviate API Key**: You can access the public Weaviate demo instance without a key or set up your own Weaviate instance and use the corresponding API key.
-
-Store your API keys as environment variables or in a configuration file:
-
-- Set them as environment variables (example for Linux/macOS):
-  ```bash
-  export COHERE_API_KEY='your_cohere_api_key_here'
-  export WEAVIATE_API_KEY='your_weaviate_api_key_here'
-  ```
-
-- Alternatively, create a `.env` file:
-  ```
-  COHERE_API_KEY=your_cohere_api_key_here
-  WEAVIATE_API_KEY=your_weaviate_api_key_here
-  ```
-  Use a library like `python-dotenv` to load these keys into your project.
-
-
 ## Example Workflow
 To use this project for semantic search:
 1. **Set up Environment**:
    - Get Cohere API Key: Sign up at [Cohere](https://cohere.ai/) and obtain your API key.
    - Get Weaviate API Key: You can access the public Weaviate demo instance without a key or set up your own Weaviate instance and use the corresponding API key.
-
-   - Store your API keys as environment variables or in a configuration file:
-
-
-
-- Alternatively, create a `.env` file:
-  ```
-  COHERE_API_KEY=your_cohere_api_key_here
-  WEAVIATE_API_KEY=your_weaviate_api_key_here
-  ```
+   - Store your API keys in a configuration file (`.env`) in this format:
+    ```
+    COHERE_API_KEY=your_cohere_api_key_here
+    WEAVIATE_API_KEY=your_weaviate_api_key_here
+    ```
    
-3. **Initialize the Weaviate client**:
+2. **Initialize the Weaviate client**:
    ```python
    import weaviate
    client = weaviate.Client()
    ```
 
-4. **Perform keyword-based or dense retrieval search**:
+3. **Perform keyword-based or dense retrieval search**:
    ```python
    query = "What is the capital of Canada?"
    # Using keyword search as example
@@ -100,7 +73,7 @@ To use this project for semantic search:
        print(result.get('text'))
    ```
 
-5. **Rerank the results**:
+4. **Rerank the results**:
    ```python
    texts = [result.get('text') for result in results]
    reranked_text = rerank_responses(query_1, texts)
