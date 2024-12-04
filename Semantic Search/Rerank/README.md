@@ -40,7 +40,7 @@ This function performs a dense retrieval by utilizing transformer-based embeddin
 
 This function reranks the retrieved results based on their relevance to the query. It assigns a relevance score to each query-response pair and sorts the results accordingly, ensuring that the most relevant answers are ranked higher.
 
-### 4. `print_result(result)`
+**4. `print_result(result)`**
 
 This function prints the retrieved articles with colorful formatting for better readability. Each property of the search result is displayed clearly.
 
