@@ -23,7 +23,8 @@ The project also includes a function to print the search results in a readable f
 ## Usage
 The following functions are included in the code:
 
-1. **`keyword_search(query, client, results_lang='en', properties, num_results)`**
+**1. `keyword_search(query, client, results_lang='en', properties, num_results)`**
+   
 This function performs keyword-based search using BM25. It takes the following parameters:
 - **query**: The search string
 - **client**: Weaviate client instance to connect to the backend
@@ -31,13 +32,16 @@ This function performs keyword-based search using BM25. It takes the following p
 - **properties**: List of properties to include in the search results
 - **num_results**: Number of search results to retrieve (default is 3)
 
-### 2. `dense_retrieval(query, client, results_lang='en', properties, num_results)`
+**2. `dense_retrieval(query, client, results_lang='en', properties, num_results)`**
+
 This function performs a dense retrieval by utilizing transformer-based embeddings to capture the semantic meaning of the query. Parameters are similar to `keyword_search`.
 
-### 3. `rerank_responses(query, responses, num_responses)`
+**3. `rerank_responses(query, responses, num_responses)`**
+
 This function reranks the retrieved results based on their relevance to the query. It assigns a relevance score to each query-response pair and sorts the results accordingly, ensuring that the most relevant answers are ranked higher.
 
 ### 4. `print_result(result)`
+
 This function prints the retrieved articles with colorful formatting for better readability. Each property of the search result is displayed clearly.
 
 ## Example Workflow
