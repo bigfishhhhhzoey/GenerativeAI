@@ -51,10 +51,22 @@ To use this project for semantic search:
     WEAVIATE_API_KEY=your_weaviate_api_key_here
     ```
    
-2. **Initialize the Weaviate client**:
+2. **Initialize the Cohere and Weaviate client**:
    ```python
+   import cohere
+   co = cohere.Client(os.environ['COHERE_API_KEY'])
+
    import weaviate
-   client = weaviate.Client()
+   auth_config = weaviate.auth.AuthApiKey(
+       api_key=os.environ['WEAVIATE_API_KEY'])
+
+   client = weaviate.Client(
+       url="https://cohere-demo.weaviate.network/",
+       auth_client_secret=auth_config,
+       additional_headers={
+           "X-Cohere-Api-Key": os.environ['COHERE_API_KEY'],
+       }
+   )
    ```
 
 3. **Perform keyword-based or dense retrieval search**:
