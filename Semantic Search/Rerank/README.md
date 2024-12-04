@@ -106,7 +106,7 @@ Keyword search often retrieves documents that contain the exact terms from the q
 
 - **After Rerank:**
 Rerank helps to ensure that the correct answer is at the top by assigning higher scores to the most relevant responses. 
-![Key Word Search](images/key1.png)
+![Key Word Search](images/key2.png)
 
 ### Dense Retrieval Results:
 - **Before Rerank:**
