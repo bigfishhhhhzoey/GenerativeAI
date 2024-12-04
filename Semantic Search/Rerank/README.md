@@ -23,7 +23,7 @@ The project also includes a function to print the search results in a readable f
 ## Usage
 The following functions are included in the code:
 
-### 1. `keyword_search(query, client, results_lang='en', properties, num_results)`
+1. **`keyword_search(query, client, results_lang='en', properties, num_results)`**
 This function performs keyword-based search using BM25. It takes the following parameters:
 - **query**: The search string
 - **client**: Weaviate client instance to connect to the backend
