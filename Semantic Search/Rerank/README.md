@@ -14,7 +14,6 @@ The project retrieves data from a public Weaviate demo database: [https://cohere
 The project also includes a function to print the search results in a readable format with colorful formatting.
 
 ## Functions
-The following functions are included in the code:
 
 **1. `keyword_search(query, client, results_lang='en', properties, num_results)`**
    
