@@ -91,7 +91,7 @@ To use this project for semantic search:
 ## How Rerank Improves Search Results
 The Rerank component plays a crucial role in enhancing the accuracy of search results. While keyword search and dense retrieval provide a good set of potential matches, these methods may still return irrelevant or incorrect results. Rerank addresses this limitation by assigning a relevance score to each retrieved document and sorting them accordingly.
 
-### Key Word Search Results:
+### Keyword Search Results:
 - **Before Rerank:**
 Keyword search often retrieves documents that contain the exact terms from the query but may not be contextually relevant.
 ![Key Word Search](images/key1.png)
