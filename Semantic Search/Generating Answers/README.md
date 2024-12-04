@@ -41,7 +41,6 @@ This function takes a question, searches the text archive for relevant paragraph
   ```
   COHERE_API_KEY=your_cohere_api_key_here
   ```
-  - Load the keys using `python-dotenv` to keep them secure.
 
 ### 2. Load Libraries and Setup API Client
 ```python
