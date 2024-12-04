@@ -13,7 +13,7 @@ The project retrieves data from a public Weaviate demo database: [https://cohere
 
 The project also includes a function to print the search results in a readable format with colorful formatting.
 
-## Usage
+## Functions
 The following functions are included in the code:
 
 **1. `keyword_search(query, client, results_lang='en', properties, num_results)`**
@@ -37,7 +37,7 @@ This function reranks the retrieved results based on their relevance to the quer
 
 This function prints the retrieved articles with colorful formatting for better readability. Each property of the search result is displayed clearly.
 
-## Example Workflow
+## Example Usage
 To use this project for semantic search:
 1. **Set up Environment**:
    - Get Cohere API Key: Sign up at [Cohere](https://cohere.ai/) and obtain your API key.
@@ -69,12 +69,8 @@ To use this project for semantic search:
 3. **Perform keyword-based or dense retrieval search**:
    ```python
    query = "What is the capital of Canada?"
-   # Using keyword search as example
-   results = keyword_search(query_1,
-                         client,
-                         properties=["text", "title", "url", "views", "lang", "_additional {distance}"],
-                         num_results=3
-                        )
+   # Using dense retrieval search as example
+   results = dense_retrieval(query,client)
 
    for i, result in enumerate(results):
        print(f"i:{i}")
